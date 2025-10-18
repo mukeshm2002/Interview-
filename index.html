@@ -3,237 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interview Prep Guide</title>
+    <title>Interview Questions - Fill Answers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <style>
-        /* Custom Styles to make the accordions look cleaner */
-        body {
-            background-color: #f8f9fa; /* Light gray background */
-        }
         .accordion-button:not(.collapsed) {
-            background-color: #0d6efd; /* Blue for active header */
+            background-color: #0d6efd; 
             color: white;
         }
         .accordion-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); 
+        }
+        .section-header {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 5px;
         }
     </style>
 </head>
 <body>
 
     <div class="container my-5">
-        <h1 class="text-center mb-4 text-primary">My Interview Prep Guide</h1>
+        <h1 class="text-center mb-5 text-primary">Interview Questions List (To Fill)</h1>
 
-        <h2 class="mt-5 mb-3 text-secondary">1. Java (Core & OOPs)</h2>
+        <h2 class="mt-5 mb-3 text-secondary section-header">1. Java (Core, OOPs, Collections & DSA)</h2>
         <div class="accordion" id="javaAccordion">
             
+            <h5 class="mt-3">OOPs & Core Concepts</h5>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJava1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava1" aria-expanded="false" aria-controls="collapseJava1">
-                        Explain the Concept of Array?
-                    </button>
-                </h2>
-                <div id="collapseJava1" class="accordion-collapse collapse" aria-labelledby="headingJava1" data-bs-parent="#javaAccordion">
-                    <div class="accordion-body">
-                        **Key Points:** Arrays store **multiple values of the same data type**. Elements are accessed using an **Index**, which starts at **0**.
-                        <br><br>
-                        **My Project Link:** *I mostly used **Lists** in my projects for dynamic sizing, but the core concept of an array is essential for understanding how to manage fixed-size collections efficiently.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j1">Explain the Concept of Array?</button></h2>
+                <div id="j1" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Focus on same data type, index starting at 0]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j2">OOPs Four pillars?</button></h2>
+                <div id="j2" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Encapsulation, Inheritance, Polymorphism, Abstraction]**</div></div>
+            </div>
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j3">Method Overloading and Method Overriding?</button></h2>
+                <div id="j3" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Different args vs Child class implementation]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j4">Abstract Classes vs Interfaces?</button></h2>
+                <div id="j4" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Partial vs Full Abstraction]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j5">Class and Objects?</button></h2>
+                <div id="j5" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Blueprint vs Instance]**</div></div>
+            </div>
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j6">Explain Access Modifiers?</button></h2>
+                <div id="j6" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Public, Protected, Default, Private]**</div></div>
+            </div>
+            
+            <h5 class="mt-4">Strings, Final & Exceptions</h5>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j7">String, StringBuilder, StringBuffer?</button></h2>
+                <div id="j7" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Immutability, Thread Safety, Performance]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j8">Final, Finally, Finalize?</button></h2>
+                <div id="j8" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Keyword, Block, Method]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j9">Explain the concept of Exception handling in your project?</button></h2>
+                <div id="j9" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Try-Catch, Project examples]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j10">Throw and Throws?</button></h2>
+                <div id="j10" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Explicitly throwing vs Declaration]**</div></div>
             </div>
 
+            <h5 class="mt-4">Collections & Java 8+ Features</h5>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJava2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava2" aria-expanded="false" aria-controls="collapseJava2">
-                        Method Overloading and Method Overriding?
-                    </button>
-                </h2>
-                <div id="collapseJava2" class="accordion-collapse collapse" aria-labelledby="headingJava2" data-bs-parent="#javaAccordion">
-                    <div class="accordion-body">
-                        **Overloading:** **Same** method name, **Different** arguments (in the same class). **Overriding:** **Same** method name and arguments, in the **Child Class** (to provide specific logic).
-                        <br><br>
-                        **My Project Link:** *I used **Overriding** heavily in my Service layer where a child service class might implement a specific behavior defined by a parent interface or class.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j11">Explain Collections framework?</button></h2>
+                <div id="j11" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Unified architecture for managing groups of objects]**</div></div>
+            </div>
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j12">Explain the concept of working with LinkedList, ArrayList, Queue, Stack, HashMap etc.?</button></h2>
+                <div id="j12" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Briefly define each structure and its strength]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j13">ArrayList vs LinkedList?</button></h2>
+                <div id="j13" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Access/Search vs Insertion/Deletion]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j14">Stream API?</button></h2>
+                <div id="j14" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Functional processing of collections]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j15">Lambda Expression and Functional Interfaces?</button></h2>
+                <div id="j15" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Concise code block for single abstract method interface]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j16">Java Features 8 to 25?</button></h2>
+                <div id="j16" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Focus on Java 8: Stream, Lambda, Functional Interface]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j17">Default Method and Static Method (in Interfaces)?</button></h2>
+                <div id="j17" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Implementation in interface vs utility method tied to class]**</div></div>
+            </div>
+
+            <h5 class="mt-4">DSA (Data Structures & Algorithms) & Patterns</h5>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j18">Concept of DSA & How do you use?</button></h2>
+                <div id="j18" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Efficiency, used ArrayList/HashMap in project]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j19">Stack, Queue?</button></h2>
+                <div id="j19" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - LIFO vs FIFO]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j20">BFS and DFS?</button></h2>
+                <div id="j20" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Level-by-level vs Branch-by-branch (Tree/Graph)]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j21">BST?</button></h2>
+                <div id="j21" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Binary Search Tree concept]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j22">Design Patterns?</button></h2>
+                <div id="j22" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Mention Singleton or Factory (if you know them)]**</div></div>
             </div>
             
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJava3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava3" aria-expanded="false" aria-controls="collapseJava3">
-                        Explain the concept of Exception Handling in your project?
-                    </button>
-                </h2>
-                <div id="collapseJava3" class="accordion-collapse collapse" aria-labelledby="headingJava3" data-bs-parent="#javaAccordion">
-                    <div class="accordion-body">
-                        **Key Points:** It handles **runtime errors** without crashing the application. I used **`try-catch`** blocks to manage errors like **`ResourceNotFoundException`** (e.g., in EMS if an employee ID is invalid) and database connection issues.
-                        <br><br>
-                        **My Project Link:** *I used a global **`@ControllerAdvice`** in the Spring Boot projects to handle all exceptions uniformly and return meaningful error messages (JSON) to the frontend.*
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJava4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava4" aria-expanded="false" aria-controls="collapseJava4">
-                        OOPs Four pillars?
-                    </button>
-                </h2>
-                <div id="collapseJava4" class="accordion-collapse collapse" aria-labelledby="headingJava4" data-bs-parent="#javaAccordion">
-                    <div class="accordion-body">
-                        **E.I.P.A.:** **Encapsulation** (Hiding data using private fields), **Inheritance** (Code reuse), **Polymorphism** (One name, many forms), **Abstraction** (Showing only essential info using interfaces/abstract classes).
-                        <br><br>
-                        **My Project Link:** *I applied **Encapsulation** in all my entities (Employee, Patient, Bus) and used **Abstraction** by defining Service layer interfaces before writing the implementation.*
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingJava5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava5" aria-expanded="false" aria-controls="collapseJava5">
-                        Stream API and Lambda Expression?
-                    </button>
-                </h2>
-                <div id="collapseJava5" class="accordion-collapse collapse" aria-labelledby="headingJava5" data-bs-parent="#javaAccordion">
-                    <div class="accordion-body">
-                        **Stream API:** Used for **efficiently processing** collections (like filtering or mapping data). **Lambda:** A **short block of code** used to implement Functional Interfaces, making Stream API concise.
-                        <br><br>
-                        **My Project Link:** *In the **Bus Reservation System**, I used the Stream API to **filter** the list of available buses based on the user's search criteria (route and date) before displaying them.*
-                    </div>
-                </div>
-            </div>
-            </div>
+        </div>
         
-        <h2 class="mt-5 mb-3 text-secondary">2. Spring & Spring Boot</h2>
+        <h2 class="mt-5 mb-3 text-secondary section-header">2. Spring & Spring Boot (Backend)</h2>
         <div class="accordion" id="springAccordion">
             
+            <h5 class="mt-3">Core Spring & REST APIs</h5>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSpring1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring1" aria-expanded="false" aria-controls="collapseSpring1">
-                        SpringBoot Modules and how you used them?
-                    </button>
-                </h2>
-                <div id="collapseSpring1" class="accordion-collapse collapse" aria-labelledby="headingSpring1" data-bs-parent="#springAccordion">
-                    <div class="accordion-body">
-                        **Key Modules:** **Spring Web** (for building REST APIs), **Spring Data JPA** (for DB connectivity/CRUD), and **Spring Security** (for user roles/login).
-                        <br><br>
-                        **My Project Link:** *In the **EMS and Patient Systems**, I primarily used **Spring Web** to handle API requests and **Spring Data JPA** to manage all data (employees, appointments, medicine).*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1">SpringBoot Modules?</button></h2>
+                <div id="s1" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Spring Web, Spring Data JPA, Spring Security]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2">Restful APIs?</button></h2>
+                <div id="s2" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - HTTP protocol rules (GET, POST, etc.) for web services]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3">Spring with Database Connectivity?</button></h2>
+                <div id="s3" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Using Spring Data JPA and MySQL in projects]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4">Spring Data JPA?</button></h2>
+                <div id="s4" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Simplifies DB access, reduces boilerplate CRUD code]**</div></div>
+            </div>
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s5">Apache Tomcat?</button></h2>
+                <div id="s5" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Embedded web server/servlet container]**</div></div>
             </div>
 
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSpring2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring2" aria-expanded="false" aria-controls="collapseSpring2">
-                        Explain Restful APIs?
-                    </button>
-                </h2>
-                <div id="collapseSpring2" class="accordion-collapse collapse" aria-labelledby="headingSpring2" data-bs-parent="#springAccordion">
-                    <div class="accordion-body">
-                        **What:** A set of rules for building web services based on the **HTTP protocol**. It uses standard HTTP methods (**GET, POST, PUT, DELETE**).
-                        <br><br>
-                        **My Project Link:** *My **EMS** and **Patient Management** systems are fully built on REST APIs. For example, to get a list of all employees, I use a **GET** request to the `/api/employees` endpoint.*
-                    </div>
-                </div>
+            <h5 class="mt-4">MVC & Request Flow</h5>
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s6">Spring MVC Architecture?</button></h2>
+                <div id="s6" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Model, View, Controller structure]**</div></div>
             </div>
-            
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSpring3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring3" aria-expanded="false" aria-controls="collapseSpring3">
-                        Explain Spring Data JPA?
-                    </button>
-                </h2>
-                <div id="collapseSpring3" class="accordion-collapse collapse" aria-labelledby="headingSpring3" data-bs-parent="#springAccordion">
-                    <div class="accordion-body">
-                        **What:** It simplifies database access by eliminating boilerplate code. We only define **Repository Interfaces**, and JPA automatically handles **CRUD** operations.
-                        <br><br>
-                        **My Project Link:** *I created **`EmployeeRepository`** and **`PatientRepository`** interfaces, which allowed me to save, find, and delete records without writing any SQL or complex JDBC code.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s7">Dispatch Servlets?</button></h2>
+                <div id="s7" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - The Front Controller, handles all incoming requests]**</div></div>
             </div>
-            
+             <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s8">Explain View layer in Spring MVC?</button></h2>
+                <div id="s8" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - UI presentation layer]**</div></div>
+            </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSpring4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring4" aria-expanded="false" aria-controls="collapseSpring4">
-                        Explain Spring Security?
-                    </button>
-                </h2>
-                <div id="collapseSpring4" class="accordion-collapse collapse" aria-labelledby="headingSpring4" data-bs-parent="#springAccordion">
-                    <div class="accordion-body">
-                        **Purpose:** Provides **Authentication** (verifying identity/login) and **Authorization** (controlling access to resources based on roles).
-                        <br><br>
-                        **My Project Link:** *Although my full **Role-Based Access** (Admin/Passenger) for the Bus system is a work in progress, I understand Spring Security is necessary to protect the Admin endpoints (like adding a bus/fixing the price).*
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingSpring5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring5" aria-expanded="false" aria-controls="collapseSpring5">
-                        What is Dispatch Servlet in Spring MVC?
-                    </button>
-                </h2>
-                <div id="collapseSpring5" class="accordion-collapse collapse" aria-labelledby="headingSpring5" data-bs-parent="#springAccordion">
-                    <div class="accordion-body">
-                        **Key Points:** It acts as the **Front Controller** in Spring MVC. It receives **ALL** incoming requests and dispatches them to the correct Controller method for processing.
-                        <br><br>
-                        **My Project Link:** *This is the entry point for all API calls in my projects, responsible for making sure a request (e.g., to create a new employee) reaches the right method.*
-                    </div>
-                </div>
-            </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s9">Spring Thymeleaf?</button></h2>
+                <div id="s9" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Server-side template engine for dynamic HTML]**</div></div>
             </div>
 
-        <h2 class="mt-5 mb-3 text-secondary">3. Frontend (HTML/CSS/JS)</h2>
-        <div class="accordion" id="frontendAccordion">
-            
+            <h5 class="mt-4">Security, Testing & Deployment</h5>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFrontend1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend1" aria-expanded="false" aria-controls="collapseFrontend1">
-                        Semantic elements in HTML?
-                    </button>
-                </h2>
-                <div id="collapseFrontend1" class="accordion-collapse collapse" aria-labelledby="headingFrontend1" data-bs-parent="#frontendAccordion">
-                    <div class="accordion-body">
-                        **What:** HTML tags that **clearly describe their meaning** (e.g., **`header`**, **`footer`**, **`nav`**, **`article`**). **Benefit:** Improves **SEO** and **Accessibility**.
-                        <br><br>
-                        **My Project Link:** *I used semantic tags like **`nav`** for the main menu and **`section`** to clearly define the different content areas in my EMS list view page.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s10">Explain Spring Security?</button></h2>
+                <div id="s10" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Authentication and Authorization]**</div></div>
             </div>
-
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFrontend2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend2" aria-expanded="false" aria-controls="collapseFrontend2">
-                        Explain DOM?
-                    </button>
-                </h2>
-                <div id="collapseFrontend2" class="accordion-collapse collapse" aria-labelledby="headingFrontend2" data-bs-parent="#frontendAccordion">
-                    <div class="accordion-body">
-                        **What:** **Document Object Model**. It is a **Tree-like representation** of an HTML document in the browser's memory. **Role:** JavaScript uses the DOM to **access** and **manipulate** the content.
-                        <br><br>
-                        **My Project Link:** *When a user clicks 'Edit' on an employee row, JavaScript uses the DOM to find the specific employee data and display it in the edit form.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s11">Mockito Test?</button></h2>
+                <div id="s11" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - Mocking framework for unit testing]**</div></div>
             </div>
-
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFrontend3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend3" aria-expanded="false" aria-controls="collapseFrontend3">
-                        What are the important properties used in CSS?
-                    </button>
-                </h2>
-                <div id="collapseFrontend3" class="accordion-collapse collapse" aria-labelledby="headingFrontend3" data-bs-parent="#frontendAccordion">
-                    <div class="accordion-body">
-                        **Key Properties:** **`display`** (especially **`flex`** or **`grid`** for layout), **`margin`**, **`padding`**, **`color`**, and **`font-size`**.
-                        <br><br>
-                        **My Project Link:** *I primarily use the Bootstrap framework, which relies on **Flexbox** (via utility classes) and various spacing properties to ensure the forms and lists look good on mobile.*
-                    </div>
-                </div>
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s12">Explain Deployment in Render?</button></h2>
+                <div id="s12" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">**[Your Answer Here - PaaS platform for building and deploying application]**</div></div>
             </div>
 
         </div>
+
+        <h2 class="mt-5 mb-3 text-secondary section-header">3. Frontend (HTML, CSS, JavaScript)</h2>
+        <div class="accordion" id="frontendAccordion">
+            
+            <h5 class="mt-3">Web Basics</h5>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Semantic elements in HTML?</button></h2>
+                <div id="f1" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body">**[Your Answer Here - Tags that describe their meaning: header, footer, nav, etc.]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">What are the properties used in CSS?</button></h2>
+                <div id="f2" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body">**[Your Answer Here - Styling rules: color, margin, padding, display (flex/grid)]**</div></div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Explain Dom?</button></h2>
+                <div id="f3" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body">**[Your Answer Here - Document Object Model (Tree structure) for JS to interact with HTML]**</div></div>
+            </div>
+
+        </div>
+        
+        <p class="text-center mt-5 text-muted">Remember to link your answers to your projects: **EMS, Patient Management, Bus Reservation.**</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
