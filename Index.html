@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Questions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .question {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .answer {
+            padding: 10px;
+            display: none;
+        }
+        @media (min-width: 600px) {
+            body {
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Interview Questions</h1>
+    <div class="question" onclick="toggleAnswer('java1')">What is an Array in Java?</div>
+    <div class="answer" id="java1">
+        An array is a data structure that stores multiple values of the same type.
+    </div>
+    <div class="question" onclick="toggleAnswer('spring1')">What are Spring Boot Modules?</div>
+    <div class="answer" id="spring1">
+        Spring Boot Modules are components that simplify dependency management for specific functionalities of the Spring framework.
+    </div>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
