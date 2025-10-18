@@ -1,49 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interview Prep Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <style>
+        /* Custom Styles to make the accordions look cleaner */
         body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
+            background-color: #f8f9fa; /* Light gray background */
         }
-        .question {
-            background-color: #f0f0f0;
-            padding: 10px;
-            margin-bottom: 5px;
-            cursor: pointer;
+        .accordion-button:not(.collapsed) {
+            background-color: #0d6efd; /* Blue for active header */
+            color: white;
         }
-        .answer {
-            padding: 10px;
-            display: none;
-        }
-        @media (min-width: 600px) {
-            body {
-                padding: 50px;
-            }
+        .accordion-item {
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
         }
     </style>
 </head>
 <body>
-    <h1>Interview Questions</h1>
-    <div class="question" onclick="toggleAnswer('java1')">What is an Array in Java?</div>
-    <div class="answer" id="java1">
-        An array is a data structure that stores multiple values of the same type.
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4 text-primary">My Interview Prep Guide</h1>
+
+        <h2 class="mt-5 mb-3 text-secondary">1. Java (Core & OOPs)</h2>
+        <div class="accordion" id="javaAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJava1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava1" aria-expanded="false" aria-controls="collapseJava1">
+                        Explain the Concept of Array?
+                    </button>
+                </h2>
+                <div id="collapseJava1" class="accordion-collapse collapse" aria-labelledby="headingJava1" data-bs-parent="#javaAccordion">
+                    <div class="accordion-body">
+                        **Key Points:** Arrays store **multiple values of the same data type**. Elements are accessed using an **Index**, which starts at **0**.
+                        <br><br>
+                        **My Project Link:** *I mostly used **Lists** in my projects for dynamic sizing, but the core concept of an array is essential for understanding how to manage fixed-size collections efficiently.*
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJava2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava2" aria-expanded="false" aria-controls="collapseJava2">
+                        Method Overloading and Method Overriding?
+                    </button>
+                </h2>
+                <div id="collapseJava2" class="accordion-collapse collapse" aria-labelledby="headingJava2" data-bs-parent="#javaAccordion">
+                    <div class="accordion-body">
+                        **Overloading:** **Same** method name, **Different** arguments (in the same class). **Overriding:** **Same** method name and arguments, in the **Child Class** (to provide specific logic).
+                        <br><br>
+                        **My Project Link:** *I used **Overriding** heavily in my Service layer where a child service class might implement a specific behavior defined by a parent interface or class.*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJava3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava3" aria-expanded="false" aria-controls="collapseJava3">
+                        Explain the concept of Exception Handling in your project?
+                    </button>
+                </h2>
+                <div id="collapseJava3" class="accordion-collapse collapse" aria-labelledby="headingJava3" data-bs-parent="#javaAccordion">
+                    <div class="accordion-body">
+                        **Key Points:** It handles **runtime errors** without crashing the application. I used **`try-catch`** blocks to manage errors like **`ResourceNotFoundException`** (e.g., in EMS if an employee ID is invalid) and database connection issues.
+                        <br><br>
+                        **My Project Link:** *I used a global **`@ControllerAdvice`** in the Spring Boot projects to handle all exceptions uniformly and return meaningful error messages (JSON) to the frontend.*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJava4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava4" aria-expanded="false" aria-controls="collapseJava4">
+                        OOPs Four pillars?
+                    </button>
+                </h2>
+                <div id="collapseJava4" class="accordion-collapse collapse" aria-labelledby="headingJava4" data-bs-parent="#javaAccordion">
+                    <div class="accordion-body">
+                        **E.I.P.A.:** **Encapsulation** (Hiding data using private fields), **Inheritance** (Code reuse), **Polymorphism** (One name, many forms), **Abstraction** (Showing only essential info using interfaces/abstract classes).
+                        <br><br>
+                        **My Project Link:** *I applied **Encapsulation** in all my entities (Employee, Patient, Bus) and used **Abstraction** by defining Service layer interfaces before writing the implementation.*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingJava5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJava5" aria-expanded="false" aria-controls="collapseJava5">
+                        Stream API and Lambda Expression?
+                    </button>
+                </h2>
+                <div id="collapseJava5" class="accordion-collapse collapse" aria-labelledby="headingJava5" data-bs-parent="#javaAccordion">
+                    <div class="accordion-body">
+                        **Stream API:** Used for **efficiently processing** collections (like filtering or mapping data). **Lambda:** A **short block of code** used to implement Functional Interfaces, making Stream API concise.
+                        <br><br>
+                        **My Project Link:** *In the **Bus Reservation System**, I used the Stream API to **filter** the list of available buses based on the user's search criteria (route and date) before displaying them.*
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+        <h2 class="mt-5 mb-3 text-secondary">2. Spring & Spring Boot</h2>
+        <div class="accordion" id="springAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpring1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring1" aria-expanded="false" aria-controls="collapseSpring1">
+                        SpringBoot Modules and how you used them?
+                    </button>
+                </h2>
+                <div id="collapseSpring1" class="accordion-collapse collapse" aria-labelledby="headingSpring1" data-bs-parent="#springAccordion">
+                    <div class="accordion-body">
+                        **Key Modules:** **Spring Web** (for building REST APIs), **Spring Data JPA** (for DB connectivity/CRUD), and **Spring Security** (for user roles/login).
+                        <br><br>
+                        **My Project Link:** *In the **EMS and Patient Systems**, I primarily used **Spring Web** to handle API requests and **Spring Data JPA** to manage all data (employees, appointments, medicine).*
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpring2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring2" aria-expanded="false" aria-controls="collapseSpring2">
+                        Explain Restful APIs?
+                    </button>
+                </h2>
+                <div id="collapseSpring2" class="accordion-collapse collapse" aria-labelledby="headingSpring2" data-bs-parent="#springAccordion">
+                    <div class="accordion-body">
+                        **What:** A set of rules for building web services based on the **HTTP protocol**. It uses standard HTTP methods (**GET, POST, PUT, DELETE**).
+                        <br><br>
+                        **My Project Link:** *My **EMS** and **Patient Management** systems are fully built on REST APIs. For example, to get a list of all employees, I use a **GET** request to the `/api/employees` endpoint.*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpring3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring3" aria-expanded="false" aria-controls="collapseSpring3">
+                        Explain Spring Data JPA?
+                    </button>
+                </h2>
+                <div id="collapseSpring3" class="accordion-collapse collapse" aria-labelledby="headingSpring3" data-bs-parent="#springAccordion">
+                    <div class="accordion-body">
+                        **What:** It simplifies database access by eliminating boilerplate code. We only define **Repository Interfaces**, and JPA automatically handles **CRUD** operations.
+                        <br><br>
+                        **My Project Link:** *I created **`EmployeeRepository`** and **`PatientRepository`** interfaces, which allowed me to save, find, and delete records without writing any SQL or complex JDBC code.*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpring4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring4" aria-expanded="false" aria-controls="collapseSpring4">
+                        Explain Spring Security?
+                    </button>
+                </h2>
+                <div id="collapseSpring4" class="accordion-collapse collapse" aria-labelledby="headingSpring4" data-bs-parent="#springAccordion">
+                    <div class="accordion-body">
+                        **Purpose:** Provides **Authentication** (verifying identity/login) and **Authorization** (controlling access to resources based on roles).
+                        <br><br>
+                        **My Project Link:** *Although my full **Role-Based Access** (Admin/Passenger) for the Bus system is a work in progress, I understand Spring Security is necessary to protect the Admin endpoints (like adding a bus/fixing the price).*
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSpring5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpring5" aria-expanded="false" aria-controls="collapseSpring5">
+                        What is Dispatch Servlet in Spring MVC?
+                    </button>
+                </h2>
+                <div id="collapseSpring5" class="accordion-collapse collapse" aria-labelledby="headingSpring5" data-bs-parent="#springAccordion">
+                    <div class="accordion-body">
+                        **Key Points:** It acts as the **Front Controller** in Spring MVC. It receives **ALL** incoming requests and dispatches them to the correct Controller method for processing.
+                        <br><br>
+                        **My Project Link:** *This is the entry point for all API calls in my projects, responsible for making sure a request (e.g., to create a new employee) reaches the right method.*
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        <h2 class="mt-5 mb-3 text-secondary">3. Frontend (HTML/CSS/JS)</h2>
+        <div class="accordion" id="frontendAccordion">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFrontend1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend1" aria-expanded="false" aria-controls="collapseFrontend1">
+                        Semantic elements in HTML?
+                    </button>
+                </h2>
+                <div id="collapseFrontend1" class="accordion-collapse collapse" aria-labelledby="headingFrontend1" data-bs-parent="#frontendAccordion">
+                    <div class="accordion-body">
+                        **What:** HTML tags that **clearly describe their meaning** (e.g., **`header`**, **`footer`**, **`nav`**, **`article`**). **Benefit:** Improves **SEO** and **Accessibility**.
+                        <br><br>
+                        **My Project Link:** *I used semantic tags like **`nav`** for the main menu and **`section`** to clearly define the different content areas in my EMS list view page.*
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFrontend2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend2" aria-expanded="false" aria-controls="collapseFrontend2">
+                        Explain DOM?
+                    </button>
+                </h2>
+                <div id="collapseFrontend2" class="accordion-collapse collapse" aria-labelledby="headingFrontend2" data-bs-parent="#frontendAccordion">
+                    <div class="accordion-body">
+                        **What:** **Document Object Model**. It is a **Tree-like representation** of an HTML document in the browser's memory. **Role:** JavaScript uses the DOM to **access** and **manipulate** the content.
+                        <br><br>
+                        **My Project Link:** *When a user clicks 'Edit' on an employee row, JavaScript uses the DOM to find the specific employee data and display it in the edit form.*
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFrontend3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrontend3" aria-expanded="false" aria-controls="collapseFrontend3">
+                        What are the important properties used in CSS?
+                    </button>
+                </h2>
+                <div id="collapseFrontend3" class="accordion-collapse collapse" aria-labelledby="headingFrontend3" data-bs-parent="#frontendAccordion">
+                    <div class="accordion-body">
+                        **Key Properties:** **`display`** (especially **`flex`** or **`grid`** for layout), **`margin`**, **`padding`**, **`color`**, and **`font-size`**.
+                        <br><br>
+                        **My Project Link:** *I primarily use the Bootstrap framework, which relies on **Flexbox** (via utility classes) and various spacing properties to ensure the forms and lists look good on mobile.*
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="question" onclick="toggleAnswer('spring1')">What are Spring Boot Modules?</div>
-    <div class="answer" id="spring1">
-        Spring Boot Modules are components that simplify dependency management for specific functionalities of the Spring framework.
-    </div>
-    <script>
-        function toggleAnswer(id) {
-            var answer = document.getElementById(id);
-            if (answer.style.display === "none") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
-        }
-    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
