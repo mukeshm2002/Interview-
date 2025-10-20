@@ -39,41 +39,101 @@
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j2">OOPs Four pillars?</button></h2>
-                <div id="j2" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Encapsulation, Inheritance, Polymorphism, Abstraction]**</div></div>
+                <div id="j2" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Encapsulation:</b> Wrapping data and methods that operate on the data into a single unit (a class), and restricting access to some of the object's components. <br>
+EX: A "capsule" medicine, where the medicine is enclosed in a shell, making it safe and accessible only when needed.</p>
+
+<p><b>Abstraction:</b> Hiding complex implementation details and showing only the essential information. <br>
+EX: A "smartwatch" displaying time and heart rate, without showing the internal mechanisms.</p>
+
+<p><b>Inheritance:</b> A class inheriting properties and methods from another class. <br>
+EX: Creating "Apple" and "Orange" classes from a "Fruits" class, where both inherit common fruit properties.</p>
+
+<p><b>Polymorphism:</b> An action working in different ways. <br>
+EX: A "cooking" action that can "stir" for vegetables and "fry" for meat.</p></div></div>
             </div>
              <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j3">Method Overloading and Method Overriding?</button></h2>
-                <div id="j3" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Different args vs Child class implementation]**</div></div>
+                <div id="j3" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Method Overloading:</b> Defining multiple methods with the same name but different parameters in the same class. Occurs at compile time.</p>
+
+<p><b>Method Overriding:</b> Subclass redefines the parent class method with the same signature. Occurs at runtime.</p></div></div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j4">Abstract Classes vs Interfaces?</button></h2>
-                <div id="j4" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Partial vs Full Abstraction]**</div></div>
+                <div id="j4" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Abstract Class:</b>
+  <ul>
+    <li>Can have abstract and non-abstract methods.</li>
+    <li>Can have instance variables.</li>
+    <li>Classes extend an abstract class.</li>
+    <li>Provides partial implementation.</li>
+  </ul>
+</p><p><b>Interface:</b>
+  <ul>
+    <li>All methods are abstract (before Java 8).</li>
+    <li>Cannot have instance variables.</li>
+    <li>Classes implement an interface.</li>
+    <li>Provides a contract for what a class must do.</li>
+  </ul>
+</p></div></div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j5">Class and Objects?</button></h2>
-                <div id="j5" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Blueprint vs Instance]**</div></div>
+                <div id="j5" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Class:</b> A template or blueprint that defines properties (attributes) and behaviors (methods).</p>
+
+<p><b>Object:</b> An instance of a class, representing a specific entity with the properties and behaviors defined by the class.</p>
+
+<h3>Example:</h3>
+
+<p>Imagine a class called "Dog". This class defines the general characteristics of all dogs, such as breed, age, and bark(). An object would be a specific dog, like "Buddy", with its own breed, age, and the ability to bark.</p>
+</div></div>
             </div>
              <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j6">Explain Access Modifiers?</button></h2>
-                <div id="j6" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Public, Protected, Default, Private]**</div></div>
+                <div id="j6" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><ul>
+  <li><b>public:</b> Accessible from any class.</li>
+  <li><b>private:</b> Accessible only within the same class.</li>
+  <li><b>protected:</b> Accessible within the same package and subclasses.</li>
+  <li><b>default (package-private):</b> Accessible within the same package.</li>
+</ul>
+</div></div>
             </div>
             
             <h5 class="mt-4">Strings, Final & Exceptions</h5>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j7">String, StringBuilder, StringBuffer?</button></h2>
-                <div id="j7" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Immutability, Thread Safety, Performance]**</div></div>
+                <div id="j7" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>String:</b> Immutable (cannot be changed after creation).</p>
+
+<p><b>StringBuilder:</b> Mutable and is generally faster than StringBuffer.</p>
+
+<p><b>StringBuffer:</b> Mutable and is Thread-Safe (synchronized).</p>
+</div></div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j8">Final, Finally, Finalize?</button></h2>
-                <div id="j8" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Keyword, Block, Method]**</div></div>
+                <div id="j8" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>final:</b> A keyword used to make a variable, method, or class unchangeable.</p>
+
+<p><b>finally:</b> A block that always executes after a try-catch block, regardless of exceptions.</p>
+
+<p><b>finalize:</b> A method called by the garbage collector before an object is reclaimed.</p>
+</div></div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j9">Explain the concept of Exception handling in your project?</button></h2>
-                <div id="j9" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Try-Catch, Project examples]**</div></div>
+                <div id="j9" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>Exception handling is a mechanism to handle runtime errors in a program.</p>
+
+<p>In my Bus Reservation System, I used custom exceptions to handle specific errors.</p>
+
+<ul>
+  <li>NoRouteFoundException: When a route is not found.</li>
+  <li>BusNotFoundException: When no buses are available on a specific date.</li>
+  <li>InsufficientSeatException: When there are not enough seats available.</li>
+  <li>SeatAlreadyBookedException: When a seat is already booked.</li>
+</ul></div></div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j10">Throw and Throws?</button></h2>
-                <div id="j10" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">**[Your Answer Here - Explicitly throwing vs Declaration]**</div></div>
+                <div id="j10" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>throw:</b> Used to explicitly throw an exception within a method.</p>
+
+<p><b>throws:</b> Used in a method signature to declare which exceptions a method might throw.</p></div></div>
             </div>
 
             <h5 class="mt-4">Collections & Java 8+ Features</h5>
