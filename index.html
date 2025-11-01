@@ -1,428 +1,413 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interview Questions - Mukesh's Comprehensive List</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <style>
-        .accordion-button:not(.collapsed) {
-            background-color: #0d6efd; 
-            color: white;
-        }
-        .accordion-item {
-            margin-bottom: 8px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1); 
-        }
-        .section-header {
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 5px;
-        }
-        .text-project-link {
-            color: #198754; /* Green color for project focus */
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>34 Interview Q&A — Java Full‑Stack (1‑minute answers)</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#071024 0%, #081127 60%);color:#e6eef6}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    header h1{margin:0;font-size:20px}
+    header p{margin:0;color:var(--muted)}
+    .controls{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+    input[type=search]{background:var(--card);border:1px solid rgba(255,255,255,0.04);padding:10px 12px;border-radius:8px;color:inherit;min-width:220px}
+    button{background:var(--accent);color:#042027;border:none;padding:10px 12px;border-radius:8px;font-weight:600;cursor:pointer}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:16px;border-radius:12px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
+    .q{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+    .q h3{margin:0;font-size:16px}
+    .meta{color:var(--muted);font-size:13px}
+    .answer{margin-top:10px;color:#dbeafe;font-size:14px;line-height:1.5}
+    .actions{margin-top:12px;display:flex;gap:8px}
+    .small{font-size:13px;color:var(--muted)}
+    .copy{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:8px;border-radius:8px;color:inherit;cursor:pointer}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    .badge{background:var(--glass);padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);font-weight:600}
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>34 Interview Q&A — Java Full‑Stack</h1>
+        <p class="small">Short, speakable ~1‑minute answers for each topic. Use this during interview prep.</p>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <span class="badge">Mukesh — Mayiladuthurai</span>
+      </div>
+    </header>
 
-    <div class="container my-5">
-        <h1 class="text-center mb-5 text-primary">Interview Questions List (Updated & Expanded)</h1>
-
-        <h2 class="mt-5 mb-3 text-secondary section-header">1. Java (Core, OOPs, Collections & DSA)</h2>
-        <div class="accordion" id="javaAccordion">
-            
-            <h5 class="mt-3">அடிப்படை ஜாவா (Core Java)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j1">Explain the Concept of Array?</button></h2>
-                <div id="j1" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">
-<p>An array is a **fixed-size** data structure used to store multiple values of the same data type. I understand its concept (single/multi-dimensional), but I **did not use raw arrays** in my projects.</p>
-
-<p>Instead, I used **ArrayList** and **LinkedList**. The reason is that arrays require you to specify a fixed size, which is inefficient when dealing with dynamic data like user lists or orders. Collections like ArrayList offer **flexible, dynamic resizing**, which is much cleaner and requires less boilerplate code to manage varying numbers of elements.</p>
-</div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j5">Class and Objects?</button></h2>
-                <div id="j5" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Class:</b> A template or blueprint that defines properties (attributes) and behaviors (methods).</p>
-
-<p><b>Object:</b> An instance of a class, representing a specific entity with the properties and behaviors defined by the class.</p>
-
-<h3>Example:</h3>
-
-<p>Imagine a class called "Dog". This class defines the general characteristics of all dogs, such as breed, age, and bark(). An object would be a specific dog, like "Buddy", with its own breed, age, and the ability to bark.</p></div></div>
-            </div>
-             <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j6">Explain Access Modifiers?</button></h2>
-                <div id="j6" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><ul>
-     <li><b>public:</b> Accessible from any class.</li>
-     <li><b>private:</b> Accessible only within the same class.</li>
-     <li><b>protected:</b> Accessible within the same package and subclasses.</li>
-     <li><b>default (package-private):</b> Accessible within the same package.</li>
-</ul>
-</div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j7">String, StringBuilder, StringBuffer?</button></h2>
-                <div id="j7" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>String:</b> **Immutable** (cannot be changed after creation).</p>
-
-<p><b>StringBuilder:</b> **Mutable** and is generally **faster** than StringBuffer (Non-synchronized).</p>
-
-<p><b>StringBuffer:</b> **Mutable** and is **Thread-Safe** (synchronized).</p>
-</div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j7a">Why is String immutable in Java?</button></h2>
-                <div id="j7a" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">
-                    <p>String objects cannot be changed after creation. This is critical for **Security** (used heavily in class loading), **Thread Safety** (multiple threads can share String objects without synchronization issues), and **Efficiency** (it allows for String Pool optimization).</p>
-                </div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j8">Final, Finally, Finalize?</button></h2>
-                <div id="j8" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>final:</b> A keyword used to make a variable, method, or class **unchangeable**.</p>
-
-<p><b>finally:</b> A block that **always executes** after a try-catch block, regardless of whether an exception occurred.</p>
-
-<p><b>finalize:</b> A method called by the **garbage collector** before an object is reclaimed (often discouraged due to unpredictable timing).</p>
-</div></div>
-            </div>
-            
-            <h5 class="mt-4">OOPs கான்செப்ட்ஸ் (Object-Oriented Programming)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j2">OOPs Four pillars?</button></h2>
-                <div id="j2" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Encapsulation:</b> Wrapping data and methods that operate on the data into a single unit (a class), and restricting access to some of the object's components. <br>
-EX: A "capsule" medicine, where the medicine is enclosed in a shell, making it safe and accessible only when needed.</p>
-
-<p><b>Abstraction:</b> Hiding complex implementation details and showing only the essential information. <br>
-EX: A "smartwatch" displaying time and heart rate, without showing the internal mechanisms.</p>
-
-<p><b>Inheritance:</b> A class inheriting properties and methods from another class. <br>
-EX: Creating "Apple" and "Orange" classes from a "Fruits" class, where both inherit common fruit properties.</p>
-
-<p><b>Polymorphism:</b> An action working in different ways. <br>
-EX: A "cooking" action that can "stir" for vegetables and "fry" for meat.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j4">Abstract Classes vs Interfaces?</button></h2>
-                <div id="j4" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Abstract Class:</b>
-     <ul>
-       <li>Can have abstract and non-abstract methods.</li>
-       <li>Can have instance variables.</li>
-       <li>Classes **extend** an abstract class.</li>
-       <li>Provides partial implementation.</li>
-     </ul>
-</p><p><b>Interface:</b>
-     <ul>
-       <li>All methods were abstract (before Java 8).</li>
-       <li>Cannot have instance variables (only constants).</li>
-       <li>Classes **implement** an interface.</li>
-       <li>Provides a contract for what a class must do.</li>
-     </ul>
-</p></div></div>
-            </div>
-             <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j3">Method Overloading and Method Overriding?</button></h2>
-                <div id="j3" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Method Overloading:</b> Defining multiple methods with the same name but different parameters in the same class. Occurs at **compile time** (Static Polymorphism).</p>
-
-<p><b>Method Overriding:</b> Subclass redefines the parent class method with the same signature. Occurs at **runtime** (Dynamic Polymorphism).</p></div></div>
-            </div>
-
-            <h5 class="mt-4">கலெக்‌ஷன்ஸ் & ஸ்ட்ரீம் API (Collections & Stream API)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j12">Explain the concept of working with LinkedList, ArrayList, Queue, Stack, HashMap etc.?</button></h2>
-                <div id="j12" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">
-<p>I utilized the following Java Collections to efficiently store and manipulate data across my projects:</p>
-<ul>
-  <li><b>ArrayList:</b> Used to handle lists of entities retrieved from the database (e.g., fetching a list of available bus routes).</li>
-  <li><b>LinkedList:</b> Used for scenarios requiring frequent additions or removals, such as managing a sequence of historical patient visits.</li>
-  <li><b>HashMap:</b> Used for storing data as Key-Value pairs to enable quick lookups based on unique IDs (e.g., mapping Employee ID to the Employee object).</li>
-  <li><b>HashSet:</b> Used to maintain a collection of unique items, such as storing a list of distinct booked seat numbers to prevent duplicate bookings.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j11">Explain Collections framework?</button></h2>
-                <div id="j11" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>It is a **unified architecture** that simplifies storing, manipulating, and retrieving a group of objects (data).</p>
-
-<ul>
-  <li>The three core interfaces are <b>List</b> (for ordered, index-based access), <b>Set</b> (for unique elements/no duplicates), and <b>Map</b> (for fast Key-Value storage).</li>
-  <li>In my projects, I rely on <b>ArrayList</b> to handle entity lists and <b>HashMap</b> for quick lookups based on unique IDs.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j13">ArrayList vs LinkedList?</button></h2>
-                <div id="j13" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>Both collections store lists, but they differ in how they work internally:</p>
-<ul>
-  <li><b>ArrayList:</b> Uses a dynamic array. Accessing elements by index (Search) is **fast ($\text{O}(1)$)**. Insertion/Deletion from the middle is **slow ($\text{O}(n)$)**.</li>
-  <li><b>LinkedList:</b> Uses a doubly-linked list. Insertion/Deletion is **fast ($\text{O}(1)$)**. Accessing an element by index (Search) is **slow ($\text{O}(n)$)**.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j14">Stream API?</button></h2>
-                <div id="j14" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>The Stream API was introduced in **Java 8** to process collections in a declarative, functional style.</p>
-<p>It allows operations like **filtering**, **mapping**, and **reducing** data in a chain (pipelining) without modifying the source collection.</p></div></div>
-            </div>
-            
-            <h5 class="mt-4">ஜாவா 8 (Java 8) மற்றும் அதற்குப் பின் (Later Versions)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j16">Java Features 8 to 25?</button></h2>
-                <div id="j16" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><ul>
-  <li><b>Java 8:</b> **Stream API** and **Lambda Expressions**.</li>
-  <li><b>Java 9:</b> **Module System** (Project Jigsaw).</li>
-  <li><b>Java 11:</b> Standardized **HTTP Client**.</li>
-  <li><b>Java 17 (LTS):</b> **Sealed Classes** and **Pattern Matching for instanceof**.</li>
-  <li><b>Java 21 (LTS):</b> **Virtual Threads** (massive concurrency boost).</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j15">Lambda Expression and Functional Interfaces?</button></h2>
-                <div id="j15" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Functional Interface:</b> An interface with only **one abstract method** (e.g., `Runnable` or `Comparator`).</p>
-<p><b>Lambda Expression:</b> Provides a **concise way** to implement the single abstract method of a functional interface, making code shorter and more readable.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j17">Default Method and Static Method (in Interfaces)?</button></h2>
-                <div id="j17" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Default Method:</b> Allows adding new methods to interfaces without breaking existing implementations. Can be **overridden** by the implementing class.</p>
-<p><b>Static Method:</b> A utility method tied directly to the interface, which **cannot be overridden** and must be called using the interface name.</p></div></div>
-            </div>
-            
-            <h5 class="mt-4">விதிவிலக்கு கையாளுதல் (Exception Handling)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j9">Explain the concept of Exception handling in your project?</button></h2>
-                <div id="j9" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>Exception handling is a mechanism to handle runtime errors in a program.</p>
-
-<p>In my Bus Reservation System, I used **custom exceptions** to handle specific errors.</p>
-
-<ul>
-    <li>NoRouteFoundException: When a route is not found.</li>
-    <li>BusNotFoundException: When no buses are available on a specific date.</li>
-    <li>InsufficientSeatException: When there are not enough seats available.</li>
-    <li>SeatAlreadyBookedException: When a seat is already booked.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j9a">Checked vs Unchecked Exceptions?</button></h2>
-                <div id="j9a" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body">
-                    <p><b>Checked Exceptions:</b> Checked at compile time (e.g., IOException, SQLException). Must be explicitly handled using a <code>try-catch</code> block or declared using <code>throws</code>.</p>
-                    <p><b>Unchecked Exceptions (Runtime):</b> Occur at runtime (e.g., NullPointerException, ArrayIndexOutOfBoundsException). Handling is optional, as they often indicate programming errors.</p>
-                </div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j10">Throw and Throws?</button></h2>
-                <div id="j10" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>throw:</b> Used to explicitly **throw an exception** within a method.</p>
-
-<p><b>throws:</b> Used in a method signature to **declare** which exceptions a method might throw.</p></div></div>
-            </div>
-
-            <h5 class="mt-4">DSA (டேட்டா ஸ்ட்ரக்சர்ஸ் & அல்காரிதம்ஸ்)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j20">BFS and DFS?</button></h2>
-                <div id="j20" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>These are graph traversal algorithms:</p>
-<p><b>BFS (Breadth-First Search):</b> Explores all neighbors at the present level before moving to the next level (level by level, uses a **Queue**).</p>
-<p><b>DFS (Depth-First Search):</b> Explores as far as possible along each branch before backtracking (branch by branch, often uses a **Stack** or recursion).</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j21">BST?</button></h2>
-                <div id="j21" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Binary Search Tree (BST):</b> A binary tree data structure where the value of every node in the left subtree is less than the value of the root node, and the value of every node in the right subtree is greater. This allows for fast searching and sorting.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j19">Stack, Queue?</button></h2>
-                <div id="j19" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p><b>Stack:</b> A linear data structure that follows the **LIFO** (Last In, First Out) principle.</p>
-<p><b>Queue:</b> A linear data structure that follows the **FIFO** (First In, First Out) principle.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j18">Concept of DSA & How do you use?</button></h2>
-                <div id="j18" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>DSA is about selecting the most efficient way to organize and process data to optimize time and memory.</p>
-<p>I applied DSA concepts by choosing **HashMap** for fast O($$1$$) lookups of entities (e.g., fetching a patient record by ID) and **ArrayList** for ordered, indexed lists, prioritizing efficient access based on the project's specific needs.</p></div></div>
-            </div>
-            
-            <h5 class="mt-4">இதர (Miscellaneous)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j22">Design Patterns?</button></h2>
-                <div id="j22" class="accordion-collapse collapse" data-bs-parent="#javaAccordion"><div class="accordion-body"><p>Design patterns are reusable solutions to common problems in software design.</p>
-<p>The most common is the **Singleton Pattern**, ensuring a class has only one instance and providing a global point of access to it (often used for logging or configuration services).</p></div></div>
-            </div>
-            
-        </div>
-        
-        <h2 class="mt-5 mb-3 text-secondary section-header">2. Spring & Spring Boot (Backend)</h2>
-        <div class="accordion" id="springAccordion">
-            
-            <h5 class="mt-3">அடிப்படை ஸ்பிரிங் பூட் (Core Spring Boot)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s0">What is Dependency Injection (DI)?</button></h2>
-                <div id="s0" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">
-                    <p>DI is a design pattern used by Spring where the **creation and management of object dependencies** are handled by the Spring IoC (Inversion of Control) container, not the object itself. This promotes **loose coupling** and makes Unit Testing with Mockito much easier.</p>
-                    <p><span class="text-project-link">PROJECT USE:</span> I use <code>@Autowired</code> or constructor injection to get an instance of my Service layer inside my Controller.</p>
-                </div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s1">SpringBoot Modules?</button></h2>
-                <div id="s1" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Spring Boot is highly modular. The core modules I utilized in my projects include:</p>
-<ul>
-    <li>**Spring Web:** For building RESTful APIs (Controllers).</li>
-    <li>**Spring Data JPA:** For database interaction and ORM.</li>
-    <li>**Spring Security:** For authentication and authorization.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s3">Spring with Database Connectivity?</button></h2>
-                <div id="s3" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>I connected Spring to the database (**MySQL** in most cases) using **Spring Data JPA**. I configured the database connection details (URL, username, password) in the `application.properties` file.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s4">Spring Data JPA?</button></h2>
-                <div id="s4" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Spring Data JPA simplifies database access by providing a high-level abstraction. It allows me to define repositories and use simple method names (like `findByUsername()`) instead of writing repetitive, boilerplate **CRUD** (Create, Read, Update, Delete) SQL queries.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s5">Apache Tomcat?</button></h2>
-                <div id="s5" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Apache Tomcat is the **default embedded web server and servlet container** used by Spring Boot. It allows the Spring application to run as a standalone Java application without needing external server installation.</p></div></div>
-            </div>
-
-            <h5 class="mt-4">ஸ்பிரிங் MVC (Spring MVC)</h5>
-             <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s6">Spring MVC Architecture?</button></h2>
-                <div id="s6" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>The MVC (Model-View-Controller) structure separates concerns:</p>
-<ul>
-    <li>**Model:** Holds the application data (e.g., the `Employee` object).</li>
-    <li>**View:** The presentation layer (e.g., the HTML page built with Thymeleaf).</li>
-    <li>**Controller:** Handles incoming requests, processes input, interacts with the Service layer, and chooses the appropriate View.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s7">Dispatch Servlets?</button></h2>
-                <div id="s7" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>The **Dispatcher Servlet** acts as the Front Controller in Spring MVC. It is the first component to receive every incoming web request, and its job is to delegate that request to the appropriate Controller method based on the URL mapping.</p></div></div>
-            </div>
-             <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s8">Explain View layer in Spring MVC?</button></h2>
-                <div id="s8" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>The View layer is responsible for presenting data to the user. In my projects, I used **Thymeleaf** as the View layer. The Controller passes the Model data to the View, which then renders the final HTML page the user sees.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s9">Spring Thymeleaf?</button></h2>
-                <div id="s9" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Thymeleaf is a popular **server-side template engine** used to create dynamic HTML pages in Spring MVC. It allows me to inject dynamic data from the Java backend (Model) directly into the HTML structure.</p></div></div>
-            </div>
-
-            <h5 class="mt-4">REST API & டெஸ்டிங் (REST API & Testing)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2">Restful APIs?</button></h2>
-                <div id="s2" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>RESTful APIs are web services built using the **HTTP protocol** rules. They are stateless and use standard HTTP methods to perform CRUD operations on resources:</p>
-<ul>
-    <li>**POST** to Create (e.g., create a new patient).</li>
-    <li>**GET** to Read/Retrieve (e.g., get all employees).</li>
-    <li>**PUT/PATCH** to Update.</li>
-    <li>**DELETE** to Remove.</li>
-</ul></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s2a">@Controller vs @RestController?</button></h2>
-                <div id="s2a" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body">
-                    <p><b>@Controller:</b> Used for traditional Spring MVC applications that typically return a view name (like a Thymeleaf template).</p>
-                    <p><b>@RestController:</b> A convenience annotation that combines <code>@Controller</code> and <code>@ResponseBody</code>. It is used exclusively for building **RESTful Web Services** and returns data directly (usually JSON/XML).</p>
-                </div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s11">Mockito Test?</button></h2>
-                <div id="s11" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Mockito is a popular **mocking framework** used for writing effective **unit tests**. I used Mockito to create mock objects of dependencies (like the Repository layer) so I could test the logic of my Service layer in isolation without actually hitting the database.</p></div></div>
-            </div>
-            
-            <h5 class="mt-4">பாதுகாப்பு & வெளியீடு (Security & Deployment)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s10">Explain Spring Security?</button></h2>
-                <div id="s10" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Spring Security is a framework that provides powerful **Authentication** (verifying who you are) and **Authorization** (verifying what you can do). I used it to secure API endpoints, ensuring only logged-in users could access specific resources in the EMS or Patient Management systems.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#s12">Explain Deployment in Render?</button></h2>
-                <div id="s12" class="accordion-collapse collapse" data-bs-parent="#springAccordion"><div class="accordion-body"><p>Render is a PaaS (Platform as a Service) solution I used for **building and deploying** my full-stack applications. It simplifies the deployment process by automatically building the Spring Boot application from my Git repository and managing the server environment.</p></div></div>
-            </div>
-
-        </div>
-
-        <h2 class="mt-5 mb-3 text-secondary section-header">3. Frontend (HTML, CSS, JavaScript)</h2>
-        <div class="accordion" id="frontendAccordion">
-            
-            <h5 class="mt-3">HTML & CSS Core</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Semantic elements in HTML?</button></h2>
-                <div id="f1" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>Semantic elements are HTML tags that clearly describe their meaning to both the browser and the developer. Examples I use are **`&lt;header&gt;`**, **`&lt;footer&gt;`**, **`&lt;nav&gt;`**, and **`&lt;section&gt;`**. They improve accessibility and SEO.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f21">Explain the CSS Box Model?</button></h2>
-                <div id="f21" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>It defines how an element's total space is calculated, consisting of four parts, from inside out:</p>
-<ol>
-    <li>**Content:** The actual element size (width/height).</li>
-    <li>**Padding:** Space between the Content and the Border.</li>
-    <li>**Border:** The line surrounding the element and its padding.</li>
-    <li>**Margin:** Clear space outside the Border, separating the element from others.</li>
-</ol>
-<p>I use <code>box-sizing: border-box;</code> to make width/height include padding and border, simplifying layout calculations.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2">What are the properties used in CSS?</button></h2>
-                <div id="f2" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>CSS properties are the styling rules applied to HTML elements. Key properties I use are **`color`**, **`margin`** and **`padding`**, and especially **`display`** (using `flex` or `grid`) for responsive layout management.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f22">Flexbox vs CSS Grid?</button></h2>
-                <div id="f22" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p><b>Flexbox:</b> A **1-dimensional** layout system (rows OR columns). Great for aligning items inside a component, like navigation links or form elements.</p>
-<p><b>CSS Grid:</b> A **2-dimensional** layout system (rows AND columns simultaneously). Used for creating the overall page layout structure (e.g., header, sidebar, main content).</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f23">What are Media Queries and how do you use them?</button></h2>
-                <div id="f23" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>Media Queries are a CSS feature that allows applying styles only when a certain condition is met, most commonly the device's screen size. This is essential for **Responsive Design**.</p>
-<p><span class="text-project-link">PROJECT USE:</span> I used them to hide or rearrange the sidebar navigation when the screen width drops below a tablet size (<code>@media (max-width: 768px)</code>), providing a mobile-friendly experience.</p></div></div>
-            </div>
-
-            <h5 class="mt-4">JavaScript & DOM Manipulation</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Explain Dom?</button></h2>
-                <div id="f3" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>The **DOM (Document Object Model)** is the tree-like structure created by the browser to represent the HTML document. It's the programming interface that allows JavaScript to interact with, modify, and update the content and structure of the HTML page dynamically.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f24">Event Bubbling and Event Capturing?</button></h2>
-                <div id="f24" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>These are the two ways events propagate through the DOM tree:</p>
-<ul>
-    <li>**Capturing (Top-Down):** The event starts at the <code>window</code> and travels down to the target element.</li>
-    <li>**Bubbling (Bottom-Up):** The event starts at the target element and travels up to the <code>window</code>. **Bubbling is the default** behavior in most browsers.</li>
-</ul>
-<p>**Event Delegation** uses the **Bubbling** phase by placing one listener on a parent element to manage events for all its children, which is great for performance.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f25">What is a Closure in JavaScript?</button></h2>
-                <div id="f25" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>A closure is the ability of an **inner function** to **access the variables of its outer function** even after the outer function has finished executing.</p>
-<p>It's used to create **private variables** and maintain state. In my projects, I use it when generating dynamic form elements to ensure each element retains its correct, private ID for handling data submission.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f26">`let`, `const`, and `var` differences?</button></h2>
-                <div id="f26" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><ul>
-    <li>**var:** **Function-scoped**. Can be redeclared and updated. **Hoisted**. Avoided in modern JS.</li>
-    <li>**let:** **Block-scoped** (inside <code>{}</code>). Cannot be redeclared but can be updated.</li>
-    <li>**const:** **Block-scoped**. Cannot be redeclared **or** updated (must be initialized). Used for values that should not change.</li>
-</ul>
-<p>I prioritize <code>const</code> by default, then <code>let</code> only if a variable needs reassignment, and I avoid <code>var</code> entirely for clean code.</p></div></div>
-            </div>
-
-            <h5 class="mt-4">Asynchronous Operations (The Core of Frontend)</h5>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f27">What is AJAX and how do you use the Fetch API?</button></h2>
-                <div id="f27" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>**AJAX (Asynchronous JavaScript and XML)** is the technique of making requests to a server **without reloading the page**. Fetch is the modern standard for this.</p>
-<p><span class="text-project-link">PROJECT USE:</span> I use <code>fetch()</code> to call my Spring Boot REST APIs (e.g., <code>fetch('/api/routes')</code>). It returns a **Promise**, which I handle using **.then()** to process the JSON data and update the DOM.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f28">Explain Promises in JavaScript?</button></h2>
-                <div id="f28" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>A Promise is an object representing the **eventual completion (or failure) of an asynchronous operation**. It acts as a placeholder for a value that will become available in the future.</p>
-<p>It has three states: **Pending** (initial), **Fulfilled** (successful completion), or **Rejected** (failed). It helps manage asynchronous flow cleanly, avoiding **Callback Hell**.</p></div></div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f29">localStorage vs sessionStorage?</button></h2>
-                <div id="f29" class="accordion-collapse collapse" data-bs-parent="#frontendAccordion"><div class="accordion-body"><p>Both are Web Storage APIs for storing key-value pairs locally in the browser.</p>
-<ul>
-    <li>**localStorage:** Data **persists** even after the browser is closed. <span class="text-project-link">PROJECT USE:</span> Storing user preferences or theme settings.</li>
-    <li>**sessionStorage:** Data is cleared when the **browser tab/window is closed**. <span class="text-project-link">PROJECT USE:</span> Storing temporary data like a multi-step form's current progress or a logged-in user's temporary state.</li>
-</ul></div></div>
-            </div>
-
-        </div>
-        
-        <p class="text-center mt-5 text-muted">Remember to link your answers to your projects: **EMS, Patient Management, Bus Reservation.**</p>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search question or keyword..." />
+      <button id="expandAll">Expand All</button>
+      <button id="collapseAll">Collapse All</button>
+      <button id="print">Print / Save PDF</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="grid" id="qaContainer">
+
+      <!-- 1 -->
+      <div class="card qa-item" data-keywords="self introduction intro">
+        <div class="q">
+          <h3>1. Easy self-introduction</h3>
+          <div class="meta">1‑minute answer</div>
+        </div>
+        <div class="answer" data-answer>
+          Hello — I’m Mukesh from Mayiladuthurai. I completed B.Tech in 2024 and specialise in Back‑End development with Java, Spring Boot and MySQL. I use Git for version control and Mockito for testing. I built projects like an Online Bus Booking system, Employee Management System, and Patient Appointment system. Recently I spent three months improving Java, Spring and DSA and I’m learning React to become a full‑stack developer.
+        </div>
+        <div class="actions">
+          <button class="copy">Copy</button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="card qa-item" data-keywords="java full stack overview frontend backend">
+        <div class="q">
+          <h3>2. What is a Java Full Stack Developer?</h3>
+          <div class="meta">1‑minute answer</div>
+        </div>
+        <div class="answer" data-answer>
+          A Java Full‑Stack Developer works on both client and server sides. On the back end we use Java and frameworks like Spring Boot to implement business logic, security and data persistence (MySQL). On the front end we build UIs with HTML, CSS and JavaScript — or server rendering with Thymeleaf — and increasingly use React for dynamic interfaces. Full‑stack means owning the data flow end‑to‑end.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="card qa-item" data-keywords="spring boot what is spring boot framework">
+        <div class="q">
+          <h3>3. What is Spring Boot?</h3>
+          <div class="meta">1‑minute answer</div>
+        </div>
+        <div class="answer" data-answer>
+          Spring Boot is a convention‑based framework built on Spring that lets you create production‑ready Java applications with minimal configuration. It provides auto‑configuration, embedded servers (Tomcat), starter dependencies and features like Actuator for monitoring. It reduces boilerplate so you can focus on business logic and build REST APIs, microservices and web apps quickly.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 4 -->
+      <div class="card qa-item" data-keywords="frontend frontend development html css js thymeleaf react">
+        <div class="q">
+          <h3>4. What is Front‑End Development?</h3>
+          <div class="meta">1‑minute answer</div>
+        </div>
+        <div class="answer" data-answer>
+          Front‑end development builds the part of the application users interact with in their browser. It uses HTML for structure, CSS for styling and JavaScript for behaviour. I have built server‑rendered pages with Thymeleaf and plan to learn React to create more dynamic single‑page applications that communicate with my Spring Boot APIs.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="card qa-item" data-keywords="class object java example">
+        <div class="q"><h3>5. Class and Objects (with example)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          A class is a blueprint that defines attributes and behavior. An object is an instance of that class. Example: class Car { String color; void start() { } } — Car myCar = new Car(); myCar.color = "Red"; myCar.start(); The class defines structure; the object represents a real entity.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="card qa-item" data-keywords="overloading overriding method polymorphism">
+        <div class="q"><h3>6. Method Overloading vs Overriding</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Overloading is having methods with the same name but different parameters in the same class — compile‑time polymorphism. Overriding is redefining a parent class method in a child class with the same signature — runtime polymorphism. Use overloading for convenience, overriding to change behavior in subclasses.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 7 -->
+      <div class="card qa-item" data-keywords="exception handling custom exceptions project">
+        <div class="q"><h3>7. Exception Handling (with Bus Booking custom exceptions)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Exception handling prevents crashes by catching and managing errors. In my Bus Booking project I created custom exceptions: NoRouteFoundException, BusNotFoundException, InsufficientSeatException and SeatAlreadyBookedException. Throwing and catching these gives clear user messages and keeps the app stable instead of returning generic errors.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 8 -->
+      <div class="card qa-item" data-keywords="throw throws difference">
+        <div class="q"><h3>8. throw vs throws</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Use `throw` to explicitly raise an exception object inside a method. Use `throws` in a method signature to declare that the method may pass exceptions to its caller. `throw` creates the exception; `throws` informs callers they must handle or rethrow it.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 9 -->
+      <div class="card qa-item" data-keywords="string stringbuilder stringbuffer immutable mutable thread safe">
+        <div class="q"><h3>9. String vs StringBuilder vs StringBuffer</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          `String` is immutable — changes create new objects. `StringBuilder` is mutable and fast but not thread‑safe, ideal for single‑threaded scenarios. `StringBuffer` is mutable and synchronized (thread‑safe) but slightly slower. Choose based on concurrency and performance needs.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 10 -->
+      <div class="card qa-item" data-keywords="java features java8 java17 java21 features">
+        <div class="q"><h3>10. Java Features (Java 8 → 25)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Java 8 added lambdas, streams and the new date API — a major release. Later versions added modules (9), `var` (10), records, text blocks, pattern matching, sealed classes, virtual threads, and performance improvements. Java 17 and 21 are LTS releases focusing on virtual threads and records. Keep answers concise and mention a few features you use.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 11 -->
+      <div class="card qa-item" data-keywords="abstract class interface difference">
+        <div class="q"><h3>11. Abstract Classes and Interfaces</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Abstract classes can have implemented methods and fields and are used when classes share behavior. Interfaces define contracts (methods) that classes implement and support multiple inheritance. Use abstract classes for shared base functionality and interfaces for loose contracts and multiple implementations.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 12 -->
+      <div class="card qa-item" data-keywords="collections framework list map set queue stack">
+        <div class="q"><h3>12. Java Collections Framework</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          The Collections Framework offers List, Set, Map and Queue interfaces and implementations like ArrayList, LinkedList, HashSet and HashMap. It provides utilities for searching, sorting and collection manipulation. I use collections for storing and processing bus lists, bookings and mappings in my projects.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 13 -->
+      <div class="card qa-item" data-keywords="stream api lambda example project">
+        <div class="q"><h3>13. Stream API & Lambda Expressions</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Lambdas provide concise function expressions; Stream API enables declarative data processing like filter, map and collect. In the Bus Booking project I used streams to filter available buses, sort by departure time and map results for the frontend — making code shorter and expressive.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 14 -->
+      <div class="card qa-item" data-keywords="array example project seats routes">
+        <div class="q"><h3>14. Arrays (with work experience)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Arrays store fixed‑size homogeneous data. I used arrays for simple seat maps and temporary route lists during development, e.g., boolean[] seats to mark booked seats. After prototyping, I moved data to database tables and Collections for scalability.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 15 -->
+      <div class="card qa-item" data-keywords="pattern printing loops interview">
+        <div class="q"><h3>15. Printing patterns (programming)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Pattern printing tests nested loops and logic. Explain row/column loops, and demonstrate a simple star or number pattern. It shows basic control flow understanding and is a good warm‑up question in interviews.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 16 -->
+      <div class="card qa-item" data-keywords="dsa use projects algorithms data structures">
+        <div class="q"><h3>16. What you know about DSA and how to use in your projects</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          DSA covers arrays, lists, stacks, queues, trees, graphs and algorithms like sorting, searching and traversal. I apply DSA to choose appropriate structures — e.g., HashMap for fast lookups, ArrayList for ordered reads — improving performance in search, booking lookups and data processing.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 17 -->
+      <div class="card qa-item" data-keywords="design patterns singleton factory strategy project">
+        <div class="q"><h3>17. Design Patterns and how to use</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Design patterns are reusable solutions to common design problems. I used Singleton for a single DB connection, Factory to create role‑based objects, and Strategy/Observer where behavior needed to be interchangeable. Patterns improve code readability and maintainability.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 18 -->
+      <div class="card qa-item" data-keywords="rest restful api projects spring boot">
+        <div class="q"><h3>18. RESTful APIs using projects</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          RESTful APIs use HTTP verbs (GET, POST, PUT, DELETE) for CRUD. In my projects I built controllers for buses, bookings and users in Spring Boot, returned JSON responses, and secured endpoints with JWT. APIs made the frontend/backed integration simple and modular.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 19 -->
+      <div class="card qa-item" data-keywords="spring security jwt project auth authorization">
+        <div class="q"><h3>19. Spring Security</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Spring Security provides authentication and authorization. I implemented JWT for stateless auth: users log in, receive a token and include it with requests. Role‑based access (Admin/User) restricts APIs and BCrypt encrypts passwords for safety.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 20 -->
+      <div class="card qa-item" data-keywords="database connectivity spring boot mysql application properties jpa">
+        <div class="q"><h3>20. Spring Boot Database Connectivity</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Spring Boot connects to databases using Spring Data JPA and auto‑configuration. Add JPA and connector dependencies, set `spring.datasource` properties, define entities and JpaRepository interfaces. Spring handles sessions and CRUD via repositories — I used this with MySQL in my apps.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 21 -->
+      <div class="card qa-item" data-keywords="git github commands push commit branch merge">
+        <div class="q"><h3>21. Git and GitHub with most used commands</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Git is a version control system; GitHub hosts repositories. Common commands: `git init`, `git status`, `git add`, `git commit`, `git branch`, `git checkout -b`, `git merge`, `git push`, `git pull`. I use branches for features and push code to GitHub for sharing and CI/CD.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 22 -->
+      <div class="card qa-item" data-keywords="spring mvc architecture controller model view dispatcherservlet thymeleaf">
+        <div class="q"><h3>22. Spring MVC Architecture with project experience</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Spring MVC follows Model, View, Controller. DispatcherServlet routes requests to controllers, controllers call services and repositories, models carry data and views (Thymeleaf) render HTML. I used this flow in Bus Booking to serve search and booking pages.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 23 -->
+      <div class="card qa-item" data-keywords="abstract interface difference example project">
+        <div class="q"><h3>23. Abstract Classes and Interfaces</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Abstract classes allow shared implementation and abstract methods; interfaces declare contracts and can be implemented by many classes. Use abstract base classes for common behavior and interfaces for service contracts (e.g., BookingService interface implemented by BookingServiceImpl).
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 24 -->
+      <div class="card qa-item" data-keywords="jcf collections arraylist linkedlist hashmap hashset queue stack">
+        <div class="q"><h3>24. Java Collections Framework</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          The JCF offers ready data structures (List, Set, Map, Queue). Use ArrayList for indexed access, LinkedList for frequent insert/delete, HashMap for key‑value mapping, HashSet for uniqueness, Queue for FIFO operations and Stack for LIFO. I applied these across projects for efficient data handling.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 25 -->
+      <div class="card qa-item" data-keywords="stream lambda project example filter sorted">
+        <div class="q"><h3>25. Stream API and Lambda Expression with project experience</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          I used lambdas and streams to process collections: filter available buses, sort by time, map entities to DTOs and collect results. Streams make code expressive and support parallelism when needed, improving readability and performance for collection operations.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 26 -->
+      <div class="card qa-item" data-keywords="semantic html elements header nav section article footer main">
+        <div class="q"><h3>26. Semantic Elements in HTML</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Semantic elements (header, nav, main, section, article, aside, footer) describe page structure clearly for browsers and accessibility tools. Using them improves SEO and maintainability. I used header/nav for menus, sections for lists and articles for bus details in my UI.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 27 -->
+      <div class="card qa-item" data-keywords="css properties most used margin padding flexbox grid display">
+        <div class="q"><h3>27. Most used properties in CSS</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Frequently used CSS properties include margin, padding, display (flex/grid), width/height, color, font‑size, background, border, box‑shadow, transition and media queries for responsiveness. I use flexbox for layout, gap for spacing and transitions for interactive UI effects.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 28 -->
+      <div class="card qa-item" data-keywords="dom javascript manipulation eventlistener createelement innerhtml">
+        <div class="q"><h3>28. DOM Manipulation in JavaScript</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          DOM manipulation means selecting elements (querySelector/getElementById), changing content or styles, adding/removing nodes, and handling events. I used DOM operations to update seat maps and display booking confirmations without full page reloads in the Bus Booking UI.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 29 -->
+      <div class="card qa-item" data-keywords="spring modules boot starters actuator security data jpa mail">
+        <div class="q"><h3>29. Spring Boot and Entire Modules</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Spring Boot modules include Core, Web, Data JPA, Security, Validation, Actuator, DevTools, Mail, Scheduling, Messaging and Cloud features. I used Web, Data JPA, Security (JWT), Validation and Actuator in my projects to build secure, monitored and data‑driven applications.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 30 -->
+      <div class="card qa-item" data-keywords="interview answer how to answer spring boot modules"
+>
+        <div class="q"><h3>30. How to answer in interview (Spring Boot modules)</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Start with a short definition, then explain architecture (Controller, Service, Repository) and list modules you used (Web, Data JPA, Security). Give a project example: how you used Spring Boot to build REST APIs, connect to MySQL and secure endpoints with JWT.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 31 -->
+      <div class="card qa-item" data-keywords="spring integration unit testing springboottest webmvctest mockbean mockmvc">
+        <div class="q"><h3>31. Spring Integration in Unit Testing</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Spring testing annotations (`@SpringBootTest`, `@WebMvcTest`, `@DataJpaTest`) and Mockito allow testing layers with or without full context. I used MockMvc for controllers, @MockBean for mocking repositories and @DataJpaTest with H2 to validate repository behavior in my projects.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 32 -->
+      <div class="card qa-item" data-keywords="pattern printing problems loops nested">
+        <div class="q"><h3>32. Printing patterns programming</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Explain pattern printing by describing row/column loops, show a simple star or number pattern and walk through code. Mention it tests loop logic and is useful for mastering control flow and nested loops.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 33 -->
+      <div class="card qa-item" data-keywords="arrays work experience seats booking example">
+        <div class="q"><h3>33. Array with work experience</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          Arrays were used for prototyping seat maps and temporary lists. Example: boolean[] seats to track booked seats. For production I migrated to database tables and Collections, but arrays helped validate logic quickly during development.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+      <!-- 34 -->
+      <div class="card qa-item" data-keywords="dispatcher servlet front controller spring mvc">
+        <div class="q"><h3>34. DispatcherServlet</h3><div class="meta">1‑minute answer</div></div>
+        <div class="answer" data-answer>
+          DispatcherServlet is the front controller in Spring MVC. It receives requests, finds the appropriate controller via HandlerMapping, executes controller logic, and uses a view resolver to render responses. In Spring Boot it is configured automatically and routes endpoints to controllers in my projects.
+        </div>
+        <div class="actions"><button class="copy">Copy</button></div>
+      </div>
+
+    </div>
+
+    <footer>
+      Tip: use the search box to quickly locate topics and the Copy button to paste answers into your notes or practice speaking them aloud.
+    </footer>
+  </div>
+
+  <script>
+    const search = document.getElementById('search');
+    const qaContainer = document.getElementById('qaContainer');
+    const items = Array.from(document.querySelectorAll('.qa-item'));
+
+    function filter(q){
+      const s = q.trim().toLowerCase();
+      items.forEach(card => {
+        const text = (card.querySelector('h3').innerText + ' ' + card.dataset.keywords + ' ' + card.querySelector('[data-answer]').innerText).toLowerCase();
+        card.style.display = text.includes(s) ? 'block' : 'none';
+      });
+    }
+
+    search.addEventListener('input', e => filter(e.target.value));
+
+    document.querySelectorAll('.copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ans = btn.closest('.qa-item').querySelector('[data-answer]').innerText;
+        navigator.clipboard.writeText(ans).then(()=>{
+          btn.innerText='Copied'; setTimeout(()=>btn.innerText='Copy',1200);
+        }).catch(()=>alert('Copy failed'));
+      });
+    });
+
+    document.getElementById('expandAll').addEventListener('click', ()=>{
+      items.forEach(c=>c.style.display='block');
+    });
+    document.getElementById('collapseAll').addEventListener('click', ()=>{
+      items.forEach(c=>c.style.display='none');
+    });
+    document.getElementById('print').addEventListener('click', ()=>window.print());
+  </script>
 </body>
 </html>
