@@ -1,413 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>34 Interview Q&A — Java Full‑Stack (1‑minute answers)</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Full Stack Developer - Interview Questions</title>
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
-    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#071024 0%, #081127 60%);color:#e6eef6}
-    .container{max-width:1100px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    header h1{margin:0;font-size:20px}
-    header p{margin:0;color:var(--muted)}
-    .controls{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
-    input[type=search]{background:var(--card);border:1px solid rgba(255,255,255,0.04);padding:10px 12px;border-radius:8px;color:inherit;min-width:220px}
-    button{background:var(--accent);color:#042027;border:none;padding:10px 12px;border-radius:8px;font-weight:600;cursor:pointer}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:20px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:16px;border-radius:12px;box-shadow:0 4px 18px rgba(2,6,23,0.6)}
-    .q{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-    .q h3{margin:0;font-size:16px}
-    .meta{color:var(--muted);font-size:13px}
-    .answer{margin-top:10px;color:#dbeafe;font-size:14px;line-height:1.5}
-    .actions{margin-top:12px;display:flex;gap:8px}
-    .small{font-size:13px;color:var(--muted)}
-    .copy{background:transparent;border:1px solid rgba(255,255,255,0.05);padding:8px;border-radius:8px;color:inherit;cursor:pointer}
-    footer{margin-top:28px;color:var(--muted);font-size:13px}
-    .badge{background:var(--glass);padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);font-weight:600}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 40px;
+    }
+    .category {
+      background-color: #1565c0;
+      color: white;
+      padding: 10px 20px;
+      margin: 20px 0 10px 0;
+      border-radius: 6px;
+      font-size: 1.2em;
+    }
+    .question {
+      background: white;
+      margin: 10px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    .question:hover {
+      background-color: #e3f2fd;
+    }
+    .answer {
+      display: none;
+      background-color: #fff;
+      padding: 20px;
+      margin: 5px 0 15px 0;
+      border-left: 5px solid #1976d2;
+      border-radius: 0 8px 8px 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      line-height: 1.6em;
+      font-size: 1.1em;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div>
-        <h1>34 Interview Q&A — Java Full‑Stack</h1>
-        <p class="small">Short, speakable ~1‑minute answers for each topic. Use this during interview prep.</p>
-      </div>
-      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-        <span class="badge">Mukesh — Mayiladuthurai</span>
-      </div>
-    </header>
+  <h1>Java Full Stack Developer - Interview Questions</h1>
 
-    <div class="controls">
-      <input id="search" type="search" placeholder="Search question or keyword..." />
-      <button id="expandAll">Expand All</button>
-      <button id="collapseAll">Collapse All</button>
-      <button id="print">Print / Save PDF</button>
-    </div>
+  <!-- Personal Introduction -->
+  <div class="category">🧑‍💼 Personal Introduction</div>
+  <div class="question">1. Tell me about yourself</div>
+  <div class="answer">I’m Mukesh from Mayiladuthurai. I completed my B.Tech in 2024 from Annai College of Engineering and Technology. I specialize in Backend Development using Java, Spring Boot, and MySQL. I’ve built multiple CRUD-based applications like Bus Ticket Reservation, Employee Management, and Patient Appointment System. I’m currently improving my full-stack skills with React.</div>
 
-    <div class="grid" id="qaContainer">
+  <div class="question">2. What is a Java Full Stack Developer?</div>
+  <div class="answer">A Java Full Stack Developer works on both Frontend and Backend parts of a web application. Backend uses Java and Spring Boot to handle business logic and database operations, while Frontend uses HTML, CSS, and JavaScript for the UI and interactivity.</div>
 
-      <!-- 1 -->
-      <div class="card qa-item" data-keywords="self introduction intro">
-        <div class="q">
-          <h3>1. Easy self-introduction</h3>
-          <div class="meta">1‑minute answer</div>
-        </div>
-        <div class="answer" data-answer>
-          Hello — I’m Mukesh from Mayiladuthurai. I completed B.Tech in 2024 and specialise in Back‑End development with Java, Spring Boot and MySQL. I use Git for version control and Mockito for testing. I built projects like an Online Bus Booking system, Employee Management System, and Patient Appointment system. Recently I spent three months improving Java, Spring and DSA and I’m learning React to become a full‑stack developer.
-        </div>
-        <div class="actions">
-          <button class="copy">Copy</button>
-        </div>
-      </div>
+  <!-- Core Java -->
+  <div class="category">☕ Core Java</div>
+  <div class="question">3. What are Classes and Objects?</div>
+  <div class="answer">A Class is a blueprint that defines properties and behaviors (methods). An Object is an instance of a class. Example: Car is a class, and myCar is an object with specific attributes.</div>
 
-      <!-- 2 -->
-      <div class="card qa-item" data-keywords="java full stack overview frontend backend">
-        <div class="q">
-          <h3>2. What is a Java Full Stack Developer?</h3>
-          <div class="meta">1‑minute answer</div>
-        </div>
-        <div class="answer" data-answer>
-          A Java Full‑Stack Developer works on both client and server sides. On the back end we use Java and frameworks like Spring Boot to implement business logic, security and data persistence (MySQL). On the front end we build UIs with HTML, CSS and JavaScript — or server rendering with Thymeleaf — and increasingly use React for dynamic interfaces. Full‑stack means owning the data flow end‑to‑end.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">4. Explain Method Overloading and Overriding</div>
+  <div class="answer">Method Overloading allows multiple methods with the same name but different parameters. Overriding occurs when a subclass provides a specific implementation of a method from its superclass.</div>
 
-      <!-- 3 -->
-      <div class="card qa-item" data-keywords="spring boot what is spring boot framework">
-        <div class="q">
-          <h3>3. What is Spring Boot?</h3>
-          <div class="meta">1‑minute answer</div>
-        </div>
-        <div class="answer" data-answer>
-          Spring Boot is a convention‑based framework built on Spring that lets you create production‑ready Java applications with minimal configuration. It provides auto‑configuration, embedded servers (Tomcat), starter dependencies and features like Actuator for monitoring. It reduces boilerplate so you can focus on business logic and build REST APIs, microservices and web apps quickly.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">5. What is Exception Handling?</div>
+  <div class="answer">Exception handling manages runtime errors using try-catch blocks. In my Bus Booking project, I created custom exceptions like NoRouteFoundException, BusNotFoundException, InsufficientSeatException, and SeatAlreadyBookedException for better user messages.</div>
 
-      <!-- 4 -->
-      <div class="card qa-item" data-keywords="frontend frontend development html css js thymeleaf react">
-        <div class="q">
-          <h3>4. What is Front‑End Development?</h3>
-          <div class="meta">1‑minute answer</div>
-        </div>
-        <div class="answer" data-answer>
-          Front‑end development builds the part of the application users interact with in their browser. It uses HTML for structure, CSS for styling and JavaScript for behaviour. I have built server‑rendered pages with Thymeleaf and plan to learn React to create more dynamic single‑page applications that communicate with my Spring Boot APIs.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">6. What is the difference between throw and throws?</div>
+  <div class="answer">‘throw’ is used to manually throw an exception. ‘throws’ declares exceptions that a method might throw, informing the calling method to handle them.</div>
 
-      <!-- 5 -->
-      <div class="card qa-item" data-keywords="class object java example">
-        <div class="q"><h3>5. Class and Objects (with example)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          A class is a blueprint that defines attributes and behavior. An object is an instance of that class. Example: class Car { String color; void start() { } } — Car myCar = new Car(); myCar.color = "Red"; myCar.start(); The class defines structure; the object represents a real entity.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">7. What are String, StringBuilder, and StringBuffer?</div>
+  <div class="answer">String is immutable, meaning changes create a new object. StringBuilder and StringBuffer are mutable. StringBuilder is faster (not thread-safe), while StringBuffer is thread-safe.</div>
 
-      <!-- 6 -->
-      <div class="card qa-item" data-keywords="overloading overriding method polymorphism">
-        <div class="q"><h3>6. Method Overloading vs Overriding</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Overloading is having methods with the same name but different parameters in the same class — compile‑time polymorphism. Overriding is redefining a parent class method in a child class with the same signature — runtime polymorphism. Use overloading for convenience, overriding to change behavior in subclasses.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">8. What are the main features from Java 8 to 25?</div>
+  <div class="answer">Key features include Lambda expressions, Stream API, Optional class, Modules, Records, Pattern Matching, Virtual Threads, and improved performance.</div>
 
-      <!-- 7 -->
-      <div class="card qa-item" data-keywords="exception handling custom exceptions project">
-        <div class="q"><h3>7. Exception Handling (with Bus Booking custom exceptions)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Exception handling prevents crashes by catching and managing errors. In my Bus Booking project I created custom exceptions: NoRouteFoundException, BusNotFoundException, InsufficientSeatException and SeatAlreadyBookedException. Throwing and catching these gives clear user messages and keeps the app stable instead of returning generic errors.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">9. Explain Abstract Classes and Interfaces</div>
+  <div class="answer">Abstract classes can have both abstract and concrete methods. Interfaces only define method signatures. In Spring, interfaces like JpaRepository define contracts implemented by classes.</div>
 
-      <!-- 8 -->
-      <div class="card qa-item" data-keywords="throw throws difference">
-        <div class="q"><h3>8. throw vs throws</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Use `throw` to explicitly raise an exception object inside a method. Use `throws` in a method signature to declare that the method may pass exceptions to its caller. `throw` creates the exception; `throws` informs callers they must handle or rethrow it.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">10. What is the Java Collections Framework?</div>
+  <div class="answer">It provides data structures like List, Set, Map, and Queue. Example: I used ArrayList to store employees, HashMap to map IDs to routes, and HashSet to avoid duplicate seats in my Bus Booking System.</div>
 
-      <!-- 9 -->
-      <div class="card qa-item" data-keywords="string stringbuilder stringbuffer immutable mutable thread safe">
-        <div class="q"><h3>9. String vs StringBuilder vs StringBuffer</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          `String` is immutable — changes create new objects. `StringBuilder` is mutable and fast but not thread‑safe, ideal for single‑threaded scenarios. `StringBuffer` is mutable and synchronized (thread‑safe) but slightly slower. Choose based on concurrency and performance needs.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">11. What are Stream API and Lambda Expressions?</div>
+  <div class="answer">Lambda Expressions simplify code using short syntax. Stream API is used for processing collections (filter, map, reduce). I used Stream to filter available buses or employees in projects.</div>
 
-      <!-- 10 -->
-      <div class="card qa-item" data-keywords="java features java8 java17 java21 features">
-        <div class="q"><h3>10. Java Features (Java 8 → 25)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Java 8 added lambdas, streams and the new date API — a major release. Later versions added modules (9), `var` (10), records, text blocks, pattern matching, sealed classes, virtual threads, and performance improvements. Java 17 and 21 are LTS releases focusing on virtual threads and records. Keep answers concise and mention a few features you use.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">12. What is an Array? How did you use it?</div>
+  <div class="answer">An Array stores multiple elements of the same type. I used arrays for seat number tracking in my Bus Booking System before switching to dynamic lists.</div>
 
-      <!-- 11 -->
-      <div class="card qa-item" data-keywords="abstract class interface difference">
-        <div class="q"><h3>11. Abstract Classes and Interfaces</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Abstract classes can have implemented methods and fields and are used when classes share behavior. Interfaces define contracts (methods) that classes implement and support multiple inheritance. Use abstract classes for shared base functionality and interfaces for loose contracts and multiple implementations.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">13. What are some common pattern programs?</div>
+  <div class="answer">Example: Printing triangles, pyramids, and number patterns. It improves logic and nested loop understanding.</div>
 
-      <!-- 12 -->
-      <div class="card qa-item" data-keywords="collections framework list map set queue stack">
-        <div class="q"><h3>12. Java Collections Framework</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          The Collections Framework offers List, Set, Map and Queue interfaces and implementations like ArrayList, LinkedList, HashSet and HashMap. It provides utilities for searching, sorting and collection manipulation. I use collections for storing and processing bus lists, bookings and mappings in my projects.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- Spring Boot -->
+  <div class="category">🌿 Spring Boot</div>
+  <div class="question">14. What is Spring Boot?</div>
+  <div class="answer">Spring Boot simplifies Java application development with auto-configuration, embedded servers, and less boilerplate code. I used it in all my backend projects for quick deployment and API creation.</div>
 
-      <!-- 13 -->
-      <div class="card qa-item" data-keywords="stream api lambda example project">
-        <div class="q"><h3>13. Stream API & Lambda Expressions</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Lambdas provide concise function expressions; Stream API enables declarative data processing like filter, map and collect. In the Bus Booking project I used streams to filter available buses, sort by departure time and map results for the frontend — making code shorter and expressive.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">15. Explain Spring Boot Modules</div>
+  <div class="answer">Spring Core (IoC), Spring MVC, Spring Data JPA, Spring Security, and Spring Test are key modules. Each supports a specific layer of the app.</div>
 
-      <!-- 14 -->
-      <div class="card qa-item" data-keywords="array example project seats routes">
-        <div class="q"><h3>14. Arrays (with work experience)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Arrays store fixed‑size homogeneous data. I used arrays for simple seat maps and temporary route lists during development, e.g., boolean[] seats to mark booked seats. After prototyping, I moved data to database tables and Collections for scalability.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">16. Explain Spring MVC Architecture</div>
+  <div class="answer">Model-View-Controller: Model handles data, View displays UI, Controller manages requests. In my Employee System, Controller fetched employee data and displayed it using Thymeleaf templates.</div>
 
-      <!-- 15 -->
-      <div class="card qa-item" data-keywords="pattern printing loops interview">
-        <div class="q"><h3>15. Printing patterns (programming)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Pattern printing tests nested loops and logic. Explain row/column loops, and demonstrate a simple star or number pattern. It shows basic control flow understanding and is a good warm‑up question in interviews.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">17. What is Spring Security?</div>
+  <div class="answer">Spring Security provides authentication and authorization. I used it for login validation and role-based access in my Bus Ticket Reservation System.</div>
 
-      <!-- 16 -->
-      <div class="card qa-item" data-keywords="dsa use projects algorithms data structures">
-        <div class="q"><h3>16. What you know about DSA and how to use in your projects</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          DSA covers arrays, lists, stacks, queues, trees, graphs and algorithms like sorting, searching and traversal. I apply DSA to choose appropriate structures — e.g., HashMap for fast lookups, ArrayList for ordered reads — improving performance in search, booking lookups and data processing.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">18. How do you connect a database in Spring Boot?</div>
+  <div class="answer">By configuring application.properties with datasource details and using JPA repositories for CRUD operations. Example: Connecting to MySQL in Employee Management System.</div>
 
-      <!-- 17 -->
-      <div class="card qa-item" data-keywords="design patterns singleton factory strategy project">
-        <div class="q"><h3>17. Design Patterns and how to use</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Design patterns are reusable solutions to common design problems. I used Singleton for a single DB connection, Factory to create role‑based objects, and Strategy/Observer where behavior needed to be interchangeable. Patterns improve code readability and maintainability.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">19. What is RESTful API?</div>
+  <div class="answer">RESTful APIs allow communication between frontend and backend via HTTP methods like GET, POST, PUT, DELETE. I created REST APIs for all CRUD operations in my projects.</div>
 
-      <!-- 18 -->
-      <div class="card qa-item" data-keywords="rest restful api projects spring boot">
-        <div class="q"><h3>18. RESTful APIs using projects</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          RESTful APIs use HTTP verbs (GET, POST, PUT, DELETE) for CRUD. In my projects I built controllers for buses, bookings and users in Spring Boot, returned JSON responses, and secured endpoints with JWT. APIs made the frontend/backed integration simple and modular.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">20. What are Design Patterns and how did you use them?</div>
+  <div class="answer">Design Patterns are reusable solutions to common problems. Example: Singleton for database connections, MVC pattern in project structure, and Factory pattern for object creation.</div>
 
-      <!-- 19 -->
-      <div class="card qa-item" data-keywords="spring security jwt project auth authorization">
-        <div class="q"><h3>19. Spring Security</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Spring Security provides authentication and authorization. I implemented JWT for stateless auth: users log in, receive a token and include it with requests. Role‑based access (Admin/User) restricts APIs and BCrypt encrypts passwords for safety.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">21. What is JPA and its interfaces?</div>
+  <div class="answer">JPA simplifies ORM with interfaces like EntityManager, JpaRepository, and CrudRepository. I used JpaRepository for easy database operations.</div>
 
-      <!-- 20 -->
-      <div class="card qa-item" data-keywords="database connectivity spring boot mysql application properties jpa">
-        <div class="q"><h3>20. Spring Boot Database Connectivity</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Spring Boot connects to databases using Spring Data JPA and auto‑configuration. Add JPA and connector dependencies, set `spring.datasource` properties, define entities and JpaRepository interfaces. Spring handles sessions and CRUD via repositories — I used this with MySQL in my apps.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">22. What is DispatcherServlet?</div>
+  <div class="answer">It is the front controller in Spring MVC that receives all requests and forwards them to appropriate controllers.</div>
 
-      <!-- 21 -->
-      <div class="card qa-item" data-keywords="git github commands push commit branch merge">
-        <div class="q"><h3>21. Git and GitHub with most used commands</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Git is a version control system; GitHub hosts repositories. Common commands: `git init`, `git status`, `git add`, `git commit`, `git branch`, `git checkout -b`, `git merge`, `git push`, `git pull`. I use branches for features and push code to GitHub for sharing and CI/CD.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">23. What is Tomcat Server?</div>
+  <div class="answer">Tomcat is a lightweight web server that runs Java web applications. Spring Boot uses an embedded Tomcat server to deploy applications easily.</div>
 
-      <!-- 22 -->
-      <div class="card qa-item" data-keywords="spring mvc architecture controller model view dispatcherservlet thymeleaf">
-        <div class="q"><h3>22. Spring MVC Architecture with project experience</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Spring MVC follows Model, View, Controller. DispatcherServlet routes requests to controllers, controllers call services and repositories, models carry data and views (Thymeleaf) render HTML. I used this flow in Bus Booking to serve search and booking pages.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- Testing and Tools -->
+  <div class="category">🧪 Testing & Tools</div>
+  <div class="question">24. Explain Spring Integration in Unit Testing</div>
+  <div class="answer">Spring provides annotations like @SpringBootTest and @MockBean for testing components. I used Mockito to test service logic in my Employee project.</div>
 
-      <!-- 23 -->
-      <div class="card qa-item" data-keywords="abstract interface difference example project">
-        <div class="q"><h3>23. Abstract Classes and Interfaces</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Abstract classes allow shared implementation and abstract methods; interfaces declare contracts and can be implemented by many classes. Use abstract base classes for common behavior and interfaces for service contracts (e.g., BookingService interface implemented by BookingServiceImpl).
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">25. Git and GitHub common commands</div>
+  <div class="answer">Common commands: git init, git clone, git add, git commit, git push, git pull, git status. I used GitHub for project version control and team collaboration.</div>
 
-      <!-- 24 -->
-      <div class="card qa-item" data-keywords="jcf collections arraylist linkedlist hashmap hashset queue stack">
-        <div class="q"><h3>24. Java Collections Framework</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          The JCF offers ready data structures (List, Set, Map, Queue). Use ArrayList for indexed access, LinkedList for frequent insert/delete, HashMap for key‑value mapping, HashSet for uniqueness, Queue for FIFO operations and Stack for LIFO. I applied these across projects for efficient data handling.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- Frontend -->
+  <div class="category">🎨 Frontend</div>
+  <div class="question">26. What are Semantic Elements in HTML?</div>
+  <div class="answer">Semantic elements like header, footer, article, and section define structure and improve accessibility and SEO.</div>
 
-      <!-- 25 -->
-      <div class="card qa-item" data-keywords="stream lambda project example filter sorted">
-        <div class="q"><h3>25. Stream API and Lambda Expression with project experience</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          I used lambdas and streams to process collections: filter available buses, sort by time, map entities to DTOs and collect results. Streams make code expressive and support parallelism when needed, improving readability and performance for collection operations.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">27. What are the most used CSS properties?</div>
+  <div class="answer">Common properties: color, margin, padding, border, font-size, background, display, flexbox, grid, and animation.</div>
 
-      <!-- 26 -->
-      <div class="card qa-item" data-keywords="semantic html elements header nav section article footer main">
-        <div class="q"><h3>26. Semantic Elements in HTML</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Semantic elements (header, nav, main, section, article, aside, footer) describe page structure clearly for browsers and accessibility tools. Using them improves SEO and maintainability. I used header/nav for menus, sections for lists and articles for bus details in my UI.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">28. What is DOM Manipulation in JavaScript?</div>
+  <div class="answer">DOM manipulation allows changing content dynamically using JavaScript methods like getElementById, querySelector, appendChild, and removeChild.</div>
 
-      <!-- 27 -->
-      <div class="card qa-item" data-keywords="css properties most used margin padding flexbox grid display">
-        <div class="q"><h3>27. Most used properties in CSS</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Frequently used CSS properties include margin, padding, display (flex/grid), width/height, color, font‑size, background, border, box‑shadow, transition and media queries for responsiveness. I use flexbox for layout, gap for spacing and transitions for interactive UI effects.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">29. Explain Spring Thymeleaf with experience</div>
+  <div class="answer">Thymeleaf is a template engine for Spring Boot. I used it to display dynamic content in my Employee Management System with HTML templates.</div>
 
-      <!-- 28 -->
-      <div class="card qa-item" data-keywords="dom javascript manipulation eventlistener createelement innerhtml">
-        <div class="q"><h3>28. DOM Manipulation in JavaScript</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          DOM manipulation means selecting elements (querySelector/getElementById), changing content or styles, adding/removing nodes, and handling events. I used DOM operations to update seat maps and display booking confirmations without full page reloads in the Bus Booking UI.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- DSA and Problem Solving -->
+  <div class="category">🧮 DSA & Problem Solving</div>
+  <div class="question">30. What do you know about DSA?</div>
+  <div class="answer">Data Structures and Algorithms improve problem-solving efficiency. I practiced arrays, stacks, queues, and sorting techniques for backend logic optimization.</div>
 
-      <!-- 29 -->
-      <div class="card qa-item" data-keywords="spring modules boot starters actuator security data jpa mail">
-        <div class="q"><h3>29. Spring Boot and Entire Modules</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Spring Boot modules include Core, Web, Data JPA, Security, Validation, Actuator, DevTools, Mail, Scheduling, Messaging and Cloud features. I used Web, Data JPA, Security (JWT), Validation and Actuator in my projects to build secure, monitored and data‑driven applications.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <div class="question">31. How do you practice DSA without a laptop?</div>
+  <div class="answer">I solve problems on paper using step-by-step logic and dry runs, which strengthens analytical and reasoning skills.</div>
 
-      <!-- 30 -->
-      <div class="card qa-item" data-keywords="interview answer how to answer spring boot modules"
->
-        <div class="q"><h3>30. How to answer in interview (Spring Boot modules)</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Start with a short definition, then explain architecture (Controller, Service, Repository) and list modules you used (Web, Data JPA, Security). Give a project example: how you used Spring Boot to build REST APIs, connect to MySQL and secure endpoints with JWT.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- Collections in Projects -->
+  <div class="category">💾 Collections in Projects</div>
+  <div class="question">32. How do you use ArrayList, LinkedList, HashMap, HashSet, Queue, Stack in your projects?</div>
+  <div class="answer">ArrayList for storing employees, LinkedList for sequential data, HashMap for key-value mapping (like routes), HashSet for unique seats, Queue for booking order, and Stack for undo/redo operations.</div>
 
-      <!-- 31 -->
-      <div class="card qa-item" data-keywords="spring integration unit testing springboottest webmvctest mockbean mockmvc">
-        <div class="q"><h3>31. Spring Integration in Unit Testing</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Spring testing annotations (`@SpringBootTest`, `@WebMvcTest`, `@DataJpaTest`) and Mockito allow testing layers with or without full context. I used MockMvc for controllers, @MockBean for mocking repositories and @DataJpaTest with H2 to validate repository behavior in my projects.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
+  <!-- Interview Tips -->
+  <div class="category">💬 Interview Tips</div>
+  <div class="question">33. How to answer effectively in an interview?</div>
+  <div class="answer">Be confident, keep answers short and structured, give a small example from your project, and show willingness to learn.</div>
 
-      <!-- 32 -->
-      <div class="card qa-item" data-keywords="pattern printing problems loops nested">
-        <div class="q"><h3>32. Printing patterns programming</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Explain pattern printing by describing row/column loops, show a simple star or number pattern and walk through code. Mention it tests loop logic and is useful for mastering control flow and nested loops.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
-
-      <!-- 33 -->
-      <div class="card qa-item" data-keywords="arrays work experience seats booking example">
-        <div class="q"><h3>33. Array with work experience</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          Arrays were used for prototyping seat maps and temporary lists. Example: boolean[] seats to track booked seats. For production I migrated to database tables and Collections, but arrays helped validate logic quickly during development.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
-
-      <!-- 34 -->
-      <div class="card qa-item" data-keywords="dispatcher servlet front controller spring mvc">
-        <div class="q"><h3>34. DispatcherServlet</h3><div class="meta">1‑minute answer</div></div>
-        <div class="answer" data-answer>
-          DispatcherServlet is the front controller in Spring MVC. It receives requests, finds the appropriate controller via HandlerMapping, executes controller logic, and uses a view resolver to render responses. In Spring Boot it is configured automatically and routes endpoints to controllers in my projects.
-        </div>
-        <div class="actions"><button class="copy">Copy</button></div>
-      </div>
-
-    </div>
-
-    <footer>
-      Tip: use the search box to quickly locate topics and the Copy button to paste answers into your notes or practice speaking them aloud.
-    </footer>
-  </div>
+  <div class="question">34. How to explain testing experience?</div>
+  <div class="answer">Mention your use of JUnit, Mockito, and manual testing experience in validating backend APIs and business logic.</div>
 
   <script>
-    const search = document.getElementById('search');
-    const qaContainer = document.getElementById('qaContainer');
-    const items = Array.from(document.querySelectorAll('.qa-item'));
-
-    function filter(q){
-      const s = q.trim().toLowerCase();
-      items.forEach(card => {
-        const text = (card.querySelector('h3').innerText + ' ' + card.dataset.keywords + ' ' + card.querySelector('[data-answer]').innerText).toLowerCase();
-        card.style.display = text.includes(s) ? 'block' : 'none';
-      });
-    }
-
-    search.addEventListener('input', e => filter(e.target.value));
-
-    document.querySelectorAll('.copy').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const ans = btn.closest('.qa-item').querySelector('[data-answer]').innerText;
-        navigator.clipboard.writeText(ans).then(()=>{
-          btn.innerText='Copied'; setTimeout(()=>btn.innerText='Copy',1200);
-        }).catch(()=>alert('Copy failed'));
+    document.querySelectorAll('.question').forEach(q => {
+      q.addEventListener('click', () => {
+        const ans = q.nextElementSibling;
+        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
       });
     });
-
-    document.getElementById('expandAll').addEventListener('click', ()=>{
-      items.forEach(c=>c.style.display='block');
-    });
-    document.getElementById('collapseAll').addEventListener('click', ()=>{
-      items.forEach(c=>c.style.display='none');
-    });
-    document.getElementById('print').addEventListener('click', ()=>window.print());
   </script>
 </body>
 </html>
