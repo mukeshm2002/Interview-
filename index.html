@@ -1,184 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Java Full Stack Developer - Interview Questions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview</title>
   <style>
+    /* CSS பகுதி - பக்கத்தின் தோற்றத்தை சரிசெய்ய */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f9fc;
-      margin: 0;
-      padding: 30px;
-      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f9;
     }
-    h1 {
-      text-align: center;
-      color: #0d47a1;
-      margin-bottom: 40px;
-    }
-    .category {
-      background-color: #1565c0;
-      color: white;
-      padding: 10px 20px;
-      margin: 20px 0 10px 0;
-      border-radius: 6px;
-      font-size: 1.2em;
-    }
-    .question {
-      background: white;
-      margin: 10px 0;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: 600;
-    }
-    .question:hover {
-      background-color: #e3f2fd;
-    }
-    .answer {
-      display: none;
+
+    .accordion-item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
       background-color: #fff;
-      padding: 20px;
-      margin: 5px 0 15px 0;
-      border-left: 5px solid #1976d2;
-      border-radius: 0 8px 8px 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-      line-height: 1.6em;
+    }
+
+    .accordion-header {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      cursor: pointer;
       font-size: 1.1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-header:hover {
+      background-color: #0056b3;
+    }
+
+    .accordion-content {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+      /* Smooth transition */
+      background-color: #e9f0f8;
+    }
+
+    .accordion-content.active {
+      max-height: 5000px;
+      /* போதுமான அளவு பெரியதாக வைக்கவும் */
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .answer {
+      margin-top: 5px;
+      color: #555;
+      padding-left: 10px;
+      border-left: 2px solid #007bff;
+    }
+
+    .qa-pair {
+      margin-bottom: 10px;
+      padding: 5px 0;
     }
   </style>
 </head>
+
 <body>
-  <h1>Java Full Stack Developer - Interview Questions</h1>
 
-  <!-- Personal Introduction -->
-  <div class="category">🧑‍💼 Personal Introduction</div>
-  <div class="question">1. Tell me about yourself</div>
-  <div class="answer">I’m Mukesh from Mayiladuthurai. I completed my B.Tech in 2024 from Annai College of Engineering and Technology. I specialize in Backend Development using Java, Spring Boot, and MySQL. I’ve built multiple CRUD-based applications like Bus Ticket Reservation, Employee Management, and Patient Appointment System. I’m currently improving my full-stack skills with React.</div>
+  <h1>📚 Interview Preparation</h1>
 
-  <div class="question">2. What is a Java Full Stack Developer?</div>
-  <div class="answer">A Java Full Stack Developer works on both Frontend and Backend parts of a web application. Backend uses Java and Spring Boot to handle business logic and database operations, while Frontend uses HTML, CSS, and JavaScript for the UI and interactivity.</div>
+  <div>
+    <h3>Self Intro</h3>
+    Good morning. Thank you for giving me this opportunity. <br>
 
-  <!-- Core Java -->
-  <div class="category">☕ Core Java</div>
-  <div class="question">3. What are Classes and Objects?</div>
-  <div class="answer">A Class is a blueprint that defines properties and behaviors (methods). An Object is an instance of a class. Example: Car is a class, and myCar is an object with specific attributes.</div>
+    My name is Mukesh, and I’m from Mayiladuthurai. I completed my B.Tech in 2024 from Annai College of Engineering and
+    Technology. <br> <br>
 
-  <div class="question">4. Explain Method Overloading and Overriding</div>
-  <div class="answer">Method Overloading allows multiple methods with the same name but different parameters. Overriding occurs when a subclass provides a specific implementation of a method from its superclass.</div>
+    I specialize in Back-End Development using Java, Spring Boot, and MySQL. I’m also familiar with Git/GitHub for
+    version control, Mockito for testing, and I connect the frontend using HTML, CSS, and Spring Thymeleaf. <br> <br>
 
-  <div class="question">5. What is Exception Handling?</div>
-  <div class="answer">Exception handling manages runtime errors using try-catch blocks. In my Bus Booking project, I created custom exceptions like NoRouteFoundException, BusNotFoundException, InsufficientSeatException, and SeatAlreadyBookedException for better user messages.</div>
+    I’ve built three major projects — an Online Bus Ticket Reservation System with Role-Based Access Control, an
+    Employee Management System, and a Patient Appointment and Medicine Management System. All these projects use RESTful
+    APIs and CRUD operations with a strong backend structure. <br> <br>
 
-  <div class="question">6. What is the difference between throw and throws?</div>
-  <div class="answer">‘throw’ is used to manually throw an exception. ‘throws’ declares exceptions that a method might throw, informing the calling method to handle them.</div>
+    After completing my technical course, I realized I needed to improve my depth of knowledge, especially after failing
+    two mock interviews. So, I spent the last three months in focused self-study — improving my Java, Spring Boot, and
+    Data Structures & Algorithms skills. <br> <br>
 
-  <div class="question">7. What are String, StringBuilder, and StringBuffer?</div>
-  <div class="answer">String is immutable, meaning changes create a new object. StringBuilder and StringBuffer are mutable. StringBuilder is faster (not thread-safe), while StringBuffer is thread-safe.</div>
+    My next goal is to learn React so that I can become a Full-Stack Developer. <br>
 
-  <div class="question">8. What are the main features from Java 8 to 25?</div>
-  <div class="answer">Key features include Lambda expressions, Stream API, Optional class, Modules, Records, Pattern Matching, Virtual Threads, and improved performance.</div>
+    I’m confident that my dedication and preparation have made me ready for this opportunity. <br> <br>
 
-  <div class="question">9. Explain Abstract Classes and Interfaces</div>
-  <div class="answer">Abstract classes can have both abstract and concrete methods. Interfaces only define method signatures. In Spring, interfaces like JpaRepository define contracts implemented by classes.</div>
+    <h3>Full-Stack Development :</h3>
 
-  <div class="question">10. What is the Java Collections Framework?</div>
-  <div class="answer">It provides data structures like List, Set, Map, and Queue. Example: I used ArrayList to store employees, HashMap to map IDs to routes, and HashSet to avoid duplicate seats in my Bus Booking System.</div>
+    A Java Full Stack Developer is someone who works on both the front-end and back-end of a web application. <br>
 
-  <div class="question">11. What are Stream API and Lambda Expressions?</div>
-  <div class="answer">Lambda Expressions simplify code using short syntax. Stream API is used for processing collections (filter, map, reduce). I used Stream to filter available buses or employees in projects.</div>
+    On the back-end, we use Java and Spring Boot to handle the main logic, security, and database connection — usually
+    with MySQL. <br>
+    On the front-end, we use HTML, CSS, and JavaScript to design the user interface and make it interactive. <br>
 
-  <div class="question">12. What is an Array? How did you use it?</div>
-  <div class="answer">An Array stores multiple elements of the same type. I used arrays for seat number tracking in my Bus Booking System before switching to dynamic lists.</div>
+    So basically, a Java Full Stack Developer manages everything — from how data is stored in the backend to how it’s
+    displayed to the user on the frontend. <br> <br>
 
-  <div class="question">13. What are some common pattern programs?</div>
-  <div class="answer">Example: Printing triangles, pyramids, and number patterns. It improves logic and nested loop understanding.</div>
+    <h3>Problem solving platform</h3>
+  </div>
 
-  <!-- Spring Boot -->
-  <div class="category">🌿 Spring Boot</div>
-  <div class="question">14. What is Spring Boot?</div>
-  <div class="answer">Spring Boot simplifies Java application development with auto-configuration, embedded servers, and less boilerplate code. I used it in all my backend projects for quick deployment and API creation.</div>
+  <div class="accordion-item">
+    <div class="accordion-header" data-topic="java">
+      ✨ Java (Core Java)
+    </div>
+    <div class="accordion-content" id="content-java">
+      <div class="qa-pair">
+        <div class="answer">
+          <h3>Class & Object :</h3>
+          <ul>
+            <li> In Java, a Class is like a blueprint or template that defines how an object should be — it contains
+              variables and methods.</li>
+            <li>An Object is an actual instance of a class — it’s created from that blueprint and has real values.</li>
+          </ul>
 
-  <div class="question">15. Explain Spring Boot Modules</div>
-  <div class="answer">Spring Core (IoC), Spring MVC, Spring Data JPA, Spring Security, and Spring Test are key modules. Each supports a specific layer of the app.</div>
+          <h3>OOPS 4 Pillars :</h3>
+          <ul>
+            <li>Encapsulation : Wrapping (or combining) data (variables) and methods (functions) that operate on that
+              data into a single unit (class).</li>
+            <li>Inheritance : A class (child) can inherit the properties and methods of another class (parent).</li>
+            <li>Polymorphism : The same method can behave differently based on the object calling it. Types:
+              Compile-time (Method Overloading), Runtime (Method Overriding)</li>
+            <li>Abstraction : Showing only the important details and hiding the implementation.</li>
+          </ul>
+          <h3>Method Overloading and Method Overriding :</h3>
+          <ul>
+            <li> Method Overloading happens within the same class, when multiple methods have the same name but
+              different parameters (different type, number, or order). It’s a compile-time polymorphism.</li>
+            <li>Method Overriding happens in different classes — a child class provides a new version of a method that
+              already exists in its parent class. It’s a runtime polymorphism.</li>
+          </ul>
+          <h3>Abstract class vs Interface :</h3>
+          An abstract class is used when we want to share common behavior among subclasses, and it can have both
+          abstract and normal methods. <br>
 
-  <div class="question">16. Explain Spring MVC Architecture</div>
-  <div class="answer">Model-View-Controller: Model handles data, View displays UI, Controller manages requests. In my Employee System, Controller fetched employee data and displayed it using Thymeleaf templates.</div>
+          An interface defines a contract that classes must follow — it supports multiple inheritance and achieves full
+          abstraction. <br>
 
-  <div class="question">17. What is Spring Security?</div>
-  <div class="answer">Spring Security provides authentication and authorization. I used it for login validation and role-based access in my Bus Ticket Reservation System.</div>
+          In my Bus Booking Project, I used interfaces like BookingService and PaymentService to define structure, and
+          abstract classes like User for shared properties between Admin and Customer. <br> <br>
 
-  <div class="question">18. How do you connect a database in Spring Boot?</div>
-  <div class="answer">By configuring application.properties with datasource details and using JPA repositories for CRUD operations. Example: Connecting to MySQL in Employee Management System.</div>
+          <h3>Exception Handling :</h3>
+          In Java, Exception Handling is a way to manage runtime errors so that the application doesn’t crash and can
+          handle unexpected situations smoothly. <br>
 
-  <div class="question">19. What is RESTful API?</div>
-  <div class="answer">RESTful APIs allow communication between frontend and backend via HTTP methods like GET, POST, PUT, DELETE. I created REST APIs for all CRUD operations in my projects.</div>
+          In my Online Bus Booking Project, I used custom exceptions to handle specific error cases clearly and
+          user-friendly. <br>
 
-  <div class="question">20. What are Design Patterns and how did you use them?</div>
-  <div class="answer">Design Patterns are reusable solutions to common problems. Example: Singleton for database connections, MVC pattern in project structure, and Factory pattern for object creation.</div>
+          For example:
 
-  <div class="question">21. What is JPA and its interfaces?</div>
-  <div class="answer">JPA simplifies ORM with interfaces like EntityManager, JpaRepository, and CrudRepository. I used JpaRepository for easy database operations.</div>
+          NoRouteFoundException – if no routes are available, it shows a message like “No routes available, please try
+          another route.” <br>
 
-  <div class="question">22. What is DispatcherServlet?</div>
-  <div class="answer">It is the front controller in Spring MVC that receives all requests and forwards them to appropriate controllers.</div>
+          BusNotFoundException – if no buses are found on a selected date, it displays “No buses available, please
+          change the date.” <br>
 
-  <div class="question">23. What is Tomcat Server?</div>
-  <div class="answer">Tomcat is a lightweight web server that runs Java web applications. Spring Boot uses an embedded Tomcat server to deploy applications easily.</div>
+          InsufficientSeatException – when all seats are booked, it shows “All seats are booked.” <br>
 
-  <!-- Testing and Tools -->
-  <div class="category">🧪 Testing & Tools</div>
-  <div class="question">24. Explain Spring Integration in Unit Testing</div>
-  <div class="answer">Spring provides annotations like @SpringBootTest and @MockBean for testing components. I used Mockito to test service logic in my Employee project.</div>
+          SeatAlreadyBookedException – if a user tries to book a taken seat, it says “This seat is already booked,
+          please choose another.” <br>
 
-  <div class="question">25. Git and GitHub common commands</div>
-  <div class="answer">Common commands: git init, git clone, git add, git commit, git push, git pull, git status. I used GitHub for project version control and team collaboration.</div>
+          These custom exceptions made my application more user-friendly, maintainable, and professional, as each
+          problem is handled properly instead of showing a generic error. <br> <br>
 
-  <!-- Frontend -->
-  <div class="category">🎨 Frontend</div>
-  <div class="question">26. What are Semantic Elements in HTML?</div>
-  <div class="answer">Semantic elements like header, footer, article, and section define structure and improve accessibility and SEO.</div>
+          <h3>Throw and Throws :</h3>
+          <ul>
+            <li>The throw keyword is used to manually throw an exception inside a method or block of code.
+              It’s followed by an object of an exception class (like new Exception()).</li>
+            <li>The throws keyword is used in a method declaration to tell the compiler that this method might throw an
+              exception, and it should be handled by the calling method.</li>
+          </ul>
+          <h3>final, finally, and finalize()</h3>
+          <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+              <th>Feature</th>
+              <th>final</th>
+              <th>finally</th>
+              <th>finalize()</th>
+            </tr>
+            <tr>
+              <td><b>Type</b></td>
+              <td>Keyword</td>
+              <td>Block</td>
+              <td>Method</td>
+            </tr>
+            <tr>
+              <td><b>Purpose</b></td>
+              <td>To make variables constant, methods non-overridable, or classes non-inheritable.</td>
+              <td>Used in exception handling to execute code whether or not an exception occurs.</td>
+              <td>Called by Garbage Collector before destroying an object (for cleanup).</td>
+            </tr>
+            <tr>
+              <td><b>Used With</b></td>
+              <td>Variables, Methods, Classes</td>
+              <td>try-catch blocks</td>
+              <td>Objects</td>
+            </tr>
+            <tr>
+          </table>
+          <h3>Java Features : </h3>
+          <table border="1" cellpadding="8" cellspacing="0">
+            <tr>
+              <th>Version</th>
+              <th>Main Features</th>
+            </tr>
+            <tr>
+              <td><b>Java 8</b></td>
+              <td>Lambdas, Stream API, Date/Time API</td>
+            </tr>
+            <tr>
+              <td><b>Java 9</b></td>
+              <td>Modules, JShell, Factory methods (<code>List.of()</code>)</td>
+            </tr>
+            <tr>
+              <td><b>Java 10</b></td>
+              <td><code>var</code> keyword</td>
+            </tr>
+            <tr>
+              <td><b>Java 11</b></td>
+              <td>New String & File methods, HTTP Client</td>
+            </tr>
+            <tr>
+              <td><b>Java 12–13</b></td>
+              <td>Switch Expressions, Text Blocks</td>
+            </tr>
+            <tr>
+              <td><b>Java 14–15</b></td>
+              <td>Records, Sealed Classes, Helpful NullPointerExceptions</td>
+            </tr>
+            <tr>
+              <td><b>Java 16–17 (LTS)</b></td>
+              <td>Records Final, Pattern Matching, Sealed Classes Final</td>
+            </tr>
+            <tr>
+              <td><b>Java 18–19</b></td>
+              <td>Virtual Threads (Preview), Simple Web Server</td>
+            </tr>
+            <tr>
+              <td><b>Java 20–21 (LTS)</b></td>
+              <td>Virtual Threads Final, String Templates, Sequenced Collections</td>
+            </tr>
+            <tr>
+              <td><b>Java 22–23</b></td>
+              <td>Unnamed Variables, Scoped Values, Primitive Patterns</td>
+            </tr>
+            <tr>
+              <td><b>Java 24–25 (LTS)</b></td>
+              <td>Module Import, Compact Source Files, Scoped Values Final</td>
+            </tr>
+          </table>
+          <h3>Stream API :</h3>
+          The Stream API and Lambda Expressions were introduced in Java 8 to make code more readable, concise, and
+          functional.
+          They help in processing collections (like filtering, mapping, sorting) easily without writing traditional
+          loops. <br><br>
 
-  <div class="question">27. What are the most used CSS properties?</div>
-  <div class="answer">Common properties: color, margin, padding, border, font-size, background, display, flexbox, grid, and animation.</div>
+          <h3>Lambda Expressions :</h3>
+          A Lambda Expression is basically a short form of writing a method — it helps to reduce boilerplate code,
+          especially in functional interfaces. <br> <br>
+          <h3>String, StringBuilder and StringBuffer :</h3>
+          In Java, String is immutable — once created, it can’t be changed.
+          StringBuilder and StringBuffer are mutable, meaning they can be modified.
+          The difference is — StringBuilder is faster but not thread-safe, while StringBuffer is thread-safe but a bit
+          slower.
+          I usually prefer StringBuilder when working on single-threaded applications for better performance.
+          <br><br>
+          <h3>Array :</h3>
+          Arrays are used to store multiple values of the same type under one variable.
+          I used arrays in my Bus Booking project to manage temporary data like seat availability and bus routes before
+          connecting to MySQL.
+          It helped me perform quick operations like searching, updating, and validating seat numbers efficiently.” <br>
+          <br>
+          <h3>Java Collections Framworks :</h3>
+          The Java Collections Framework provides pre-built classes and interfaces to store and manage data efficiently.
+          It includes structures like List, Set, Map, and Queue. <br>
 
-  <div class="question">28. What is DOM Manipulation in JavaScript?</div>
-  <div class="answer">DOM manipulation allows changing content dynamically using JavaScript methods like getElementById, querySelector, appendChild, and removeChild.</div>
+          For example, in my Bus Booking Project, I used ArrayList for storing bus details, HashSet for unique routes,
+          and HashMap for mapping booking IDs to their booking details.
 
-  <div class="question">29. Explain Spring Thymeleaf with experience</div>
-  <div class="answer">Thymeleaf is a template engine for Spring Boot. I used it to display dynamic content in my Employee Management System with HTML templates.</div>
+          <h3> Usecase : </h3>
+          “I’ve worked with major Java collections like ArrayList, LinkedList, HashMap, HashSet, Queue, and Stack in my
+          Spring Boot projects.
+          For example, I used ArrayList to store and display available buses, HashMap to map routes with seat counts,
+          and Queue to manage waiting passengers.
+          These collections helped me improve performance, handle data efficiently, and simplify backend logic.”
+          <ul>
+            <li>I used ArrayList to store and display available buses</li>
+            <li>HashMap to map routes with seat counts</li>
+            <li>Queue to manage waiting passengers</li>
+          </ul>
+          These collections helped me improve performance, handle data efficiently, and simplify backend logic.”
+          <br>
+          <h3>DSA :</h3>
+          DSA stands for Data Structures and Algorithms.
 
-  <!-- DSA and Problem Solving -->
-  <div class="category">🧮 DSA & Problem Solving</div>
-  <div class="question">30. What do you know about DSA?</div>
-  <div class="answer">Data Structures and Algorithms improve problem-solving efficiency. I practiced arrays, stacks, queues, and sorting techniques for backend logic optimization.</div>
+          Data Structures help in organizing and storing data efficiently — like Arrays, Lists, Maps, and Trees.
+          Algorithms are step-by-step methods to solve problems — like Searching, Sorting, and Traversal techniques.
+          <br>
 
-  <div class="question">31. How do you practice DSA without a laptop?</div>
-  <div class="answer">I solve problems on paper using step-by-step logic and dry runs, which strengthens analytical and reasoning skills.</div>
+          I’ve studied and practiced all the important DSA topics, such as Arrays, Linked Lists, Stacks, Queues,
+          HashMaps, Recursion, Sorting, and Searching algorithms. <br> <br>
 
-  <!-- Collections in Projects -->
-  <div class="category">💾 Collections in Projects</div>
-  <div class="question">32. How do you use ArrayList, LinkedList, HashMap, HashSet, Queue, Stack in your projects?</div>
-  <div class="answer">ArrayList for storing employees, LinkedList for sequential data, HashMap for key-value mapping (like routes), HashSet for unique seats, Queue for booking order, and Stack for undo/redo operations.</div>
+          In my Bus Booking Project, I used data structures and algorithms in many places — <br>
 
-  <!-- Interview Tips -->
-  <div class="category">💬 Interview Tips</div>
-  <div class="question">33. How to answer effectively in an interview?</div>
-  <div class="answer">Be confident, keep answers short and structured, give a small example from your project, and show willingness to learn.</div>
+          I used ArrayLists and HashMaps to store and manage bus details, routes, and bookings efficiently. <br>
 
-  <div class="question">34. How to explain testing experience?</div>
-  <div class="answer">Mention your use of JUnit, Mockito, and manual testing experience in validating backend APIs and business logic.</div>
+          I used searching algorithms to quickly find buses between selected routes. <br>
 
-  <script>
-    document.querySelectorAll('.question').forEach(q => {
-      q.addEventListener('click', () => {
-        const ans = q.nextElementSibling;
-        ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
+          I used sorting logic to arrange buses by departure time or ticket price. <br>
+
+          In my Employee Management System, I applied HashMaps for quick access to employee data and lists for CRUD
+          operations. <br>
+
+          So, DSA helps me write optimized, clean, and efficient code, which improves both performance and scalability
+          in real-world projects. <br> <br>
+
+          <h3>Design Pattern :</h3>
+          Design Patterns are proven solutions to common software design problems.
+          They help make the code more reusable, maintainable, and scalable. <br>
+
+          In simple words, instead of solving the same type of problem again and again, we use a standard approach —
+          that’s what a design pattern provides. <br> <br>
+
+          There are three main types of design patterns: <br>
+
+          Creational Patterns – For object creation (like Singleton, Factory). <br>
+
+          Structural Patterns – For class and object composition (like Adapter, Facade). <br>
+
+          Behavioral Patterns – For communication between objects (like Observer, Strategy). <br><br>
+
+          In my Bus Booking Project, I used the Singleton Pattern for database connection — ensuring only one instance
+          of the connection is created throughout the application. <br>
+
+          In my Employee Management System, I used the Factory Pattern to create different types of employee objects
+          based on their roles. <br>
+
+          These patterns helped me reduce code duplication, improve flexibility, and make debugging easier. <br> <br>
+
+          <h3>Pattern Programming :</h3>
+
+          “Pattern printing helps test nested loop logic.
+          I use outer loops for rows and inner loops for columns or spaces.
+          I’ve practiced star, number, and pyramid patterns to strengthen my loop logic and improve coding efficiency.”
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" data-topic="springboot">
+        🌱 Spring Boot
+      </div>
+      <div class="accordion-content" id="content-springboot">
+        <div class="qa-pair">
+          <div class="answer">
+            <h3>Spring Boot :</h3>
+            Spring Boot is a framework built on top of the Spring Framework.
+            Its main goal is to make it easier and faster to start and develop Spring applications. <br>
+            It removes the need for lots of manual configuration, so developers can focus on writing business logic.
+            <br>
+            <br>
+
+            The main idea of Spring Boot is “Convention over Configuration”, meaning it uses smart defaults so we don’t
+            have to set up everything ourselves. <br>
+
+            For example, if we add spring-boot-starter-web, it automatically sets up everything needed for a web app —
+            like the Dispatcher Servlet and other MVC parts. <br>
+
+            Another big advantage is embedded servers like Tomcat or Jetty.
+            They let us run the app directly as a single JAR file, without installing a separate server. <br><br>
+
+            <h3>Spring MVC :</h3>
+            Spring MVC is a main part of building web applications in Spring.
+            MVC stands for Model-View-Controller, and it helps to separate the logic, design, and user input of an
+            application. <br>
+
+            When a user sends a request, the Controller receives it.
+            The Controller then calls the Model, which handles the business logic and data.
+            After processing, the Model sends the data back to the Controller.
+            Finally, the Controller passes that data to the View (like a Thymeleaf page or JSON response) to show it to
+            the user. <br>
+
+            This structure keeps the code clean, easy to test, and simple to maintain. <br>
+
+            For example, in my Employee Management System,
+            the Controllers handled API requests,
+            the Services managed the business logic,
+            and the Repositories connected with the database. <br> <br>
+
+            <h3>View Layer : </h3>
+            In Spring MVC architecture, the View layer is the part that shows data to the user — it’s what users
+            actually
+            see and interact with, like employee details, bus routes, or appointment timings. <br>
+
+            The View layer can be built using different technologies.
+            In my projects, such as the Employee Management System, I used Thymeleaf for the View layer.
+            Thymeleaf is a server-side template engine that helps us add dynamic data into HTML pages. <br>
+
+            After the Controller gets data from the Model, it chooses which Thymeleaf template to use and passes the
+            data
+            to it.
+            Then Thymeleaf processes that data and creates the final HTML page, which is sent to the user’s browser.
+
+            This setup helps to keep the design (view) separate from business logic, while still allowing dynamic web
+            pages. <br> <br>
+
+            <h3>Rest API :</h3>
+            In Spring Boot, a RESTful API is used to build communication between the client and server using HTTP
+            methods.
+            REST stands for Representational State Transfer, and it follows a simple rule — use standard HTTP methods
+            for
+            operations.
+
+            For example:
+            <ul>
+              <li>GET → to fetch data</li>
+
+              <li>POST → to add new data</li>
+
+              <li>PUT → to update existing data</li>
+
+              <li>DELETE → to remove data</li>
+            </ul>
+            In Spring Boot, we create REST APIs using the @RestController annotation.
+            Inside that, we map URLs to methods using annotations like @GetMapping, @PostMapping, @PutMapping, and
+            @DeleteMapping.
+
+            The methods usually return JSON data, which the client (like React, Angular, or mobile app) can easily use.
+
+            For example, I created REST APIs in my Employee Management System, where the controller handled employee
+            CRUD
+            operations — like adding, viewing, updating, and deleting employee details.
+
+            This makes the application lightweight, scalable, and easy to integrate with any frontend or external
+            system.
+
+            <h3>Database Connectivity :</h3>
+            Connecting Spring Boot to a database is very easy with Spring Data JPA. <br>
+
+            First, we add the spring-boot-starter-data-jpa dependency.
+            It includes everything we need, including Hibernate, which helps map Java classes to database tables. <br>
+            <br>
+
+            Next, we set up the database connection in the application.properties file.
+            We just add the database URL, username, and password, and Spring Boot automatically creates the connection
+            for
+            us. <br>
+
+            Then, we create our data models as JPA entities.
+            For example, an Employee class marked with @Entity will be linked to an employee table in the database. <br>
+            <br>
+
+            Finally, we make repository interfaces by extending JpaRepository.
+            This gives us all the basic CRUD operations — like save, find, update, and delete — without writing extra
+            code. <br>
+
+            This makes database handling simple and fast, so we can focus more on our business logic. <br> <br>
+
+            <h3>Spring Security :</h3>
+            Spring Security is a powerful framework that provides authentication and authorization for Spring
+            applications. <br>
+
+            It helps protect applications by ensuring that only the right users can access specific parts of the system.
+            <br>
+
+            Authentication means verifying who the user is — usually through a username and password. <br>
+
+            Authorization means checking what the user is allowed to do — like accessing certain APIs or pages. <br>
+
+            In Spring Boot, adding spring-boot-starter-security automatically sets up basic security. It secures all
+            endpoints and provides a default login page. <br>
+
+            You can customize it by defining user roles, using a database for user details, or securing APIs with JWT
+            (JSON Web Token) for stateless authentication. <br>
+
+            Overall, Spring Security makes it simple to build secure, role-based, and token-based authentication systems
+            in Spring Boot applications. <br> <br>
+
+
+            <h3>Spring Thymeleaf :</h3>
+            Spring Thymeleaf is a server-side template engine used in Spring Boot applications to create dynamic web
+            pages. <br>
+
+            It allows you to combine HTML with Spring data — meaning you can easily show data from your backend directly
+            in your web pages. <br>
+
+            The Controller sends data (like employee details or user info) to the Thymeleaf template. <br>
+
+            In the template, we use simple expressions like ${employee.name} to display that data inside the HTML. <br>
+
+            When the page is rendered, Thymeleaf replaces those placeholders with real data and sends the final HTML to
+            the browser. <br>
+
+            Thymeleaf works well with Spring MVC and supports form handling, loops, conditions, and
+            internationalization.
+            <br>
+
+            It’s easy to read, looks like normal HTML, and helps keep your frontend and backend connected smoothly while
+            building dynamic web apps. <br> <br>
+
+            <h3>Test Cases Integration :</h3>
+            In my project, I used Mockito for writing unit test cases in Spring Boot.
+            Mockito helps me test the logic of a class without using real dependencies like a database or external API.
+            <br>
+
+            For example, if I’m testing a Service class, I can create a mock repository using the @Mock annotation, and
+            inject it into my service using @InjectMocks.
+            Then, I can define how the mock should behave — like returning some fake data when a method is called. <br>
+
+            This way, I can focus only on testing my business logic, not the real database.
+            It makes testing faster, easier, and more reliable. <br>
+
+            I usually write these test cases using JUnit along with Mockito, to check if my methods return the correct
+            results or handle exceptions properly. <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" data-topic="frontend">
+        🎨 Frontend (HTML/CSS/JS)
+      </div>
+      <div class="accordion-content" id="content-frontend">
+        <div class="qa-pair">
+          <div class="answer">
+            <h3>Semantic HTML :</h3>
+            Semantic HTML elements provide structure and meaning to web content, making it more accessible and
+            understandable for browsers and developers. They help improve the overall readability and maintainability of
+            the code. Some common semantic elements include: &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;,
+            &lt;section&gt;, &lt;aside&gt;, and &lt;nav&gt;.
+            <h3>CSS Properties :</h3>
+            The most commonly used CSS properties include margin and padding for spacing, color and font-size for
+            typography, display and position for layout, and border for creating borders.
+            <h3>CSS box model :</h3>
+            The CSS box model describes every element as a box with content, padding, border, and margin. It's used for
+            designing layouts.
+            <h3>CSS selectors :</h3>
+            CSS selectors are used to target HTML elements that need to be styled. They include tag, class, and ID selectors.
+            <h3>DOM manipulation :</h3>
+            DOM manipulation is the act of using JavaScript to dynamically change the content, structure, or style of a webpage.
+            <h3>Event loop in JavaScript :</h3>
+            The event loop is a mechanism that handles asynchronous code execution and ensures that events are processed when the main thread is available.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>Git & Github :</h3>
+      Git is a distributed version control system that lets developers track changes in their code and collaborate on
+      projects. GitHub is a web-based platform that provides hosting for Git repositories, along with features for
+      project management, collaboration, and code review.
+      <ul>
+        <li>git init: This command creates a new Git repository in the current folder.</li>
+        <li>git clone: This command creates a copy of a remote Git repository on your local machine.</li>
+        <li>git status: This command shows the current state of your repository, including which files have been
+          modified or staged.</li>
+        <li>git add: This command adds files to the staging area, preparing them for the next commit.</li>
+        <li>git commit: This command creates a snapshot of your project's changes, saving them in the repository's
+          history.</li>
+        <li>git push: This command sends your committed changes from your local repository to a remote repository.</li>
+        <li>git pull: This command fetches and merges changes from a remote repository to your local one.</li>
+        <li>git branch: This command lets you manage branches in your repository, such as creating, listing, or deleting
+          them.</li>
+        <li>git checkout: This command lets you switch between branches or restore files from a specific commit.</li>
+        <li>git merge: This command combines the changes from one branch into another.</li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
